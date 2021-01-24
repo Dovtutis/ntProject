@@ -1,0 +1,85 @@
+@import "config";
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-stack;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  max-width: 1100px;
+}
+
+#navbar {
+  position: fixed;
+  width: 100%;
+  height: $navbar-height;
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+
+  .navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: 100%;
+
+    .home-link {
+      text-decoration: none;
+      color: $navbar-text-color;
+    }
+
+    .navbar-menu {
+      
+      .navbar-links {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        transition: color .3s ease-in-out;
+
+        .navbar-item {
+          padding: 0 15px;
+        }
+
+        .navbar-link {
+          color: $navbar-text-color;
+          text-decoration: none;
+          transition: .3s;
+        }
+
+        .navbar-link:hover {
+          color: $navbar-text-focus-color;
+        }
+
+        .navbar-item:hover {
+          transform: scale(.97);
+        }
+      }
+    }
+
+    .nav-logo {
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+  }
+}
+
+@import "small-screen";
