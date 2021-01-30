@@ -29,4 +29,22 @@ function closeMobileNavbar() {
     navbarToggle.setAttribute("aria-label", "Open navigation menu.");
 }
 
+// GALLERY
 
+const scrollLeftButton = document.getElementById('scroll-left-button');
+const scrollRightButton = document.getElementById('scroll-right-button');
+const galleryContainer = document.querySelector('.sliding-container');
+scrollLeftButton.addEventListener('click', scrollLeft);
+scrollRightButton.addEventListener('click', scrollRight);
+let counterLeft = 1;
+let counterRight = 1;
+
+function scrollLeft (){
+    galleryContainer.style.transform = `translateX(-${counterLeft*400}px)`;
+    counterLeft++;
+}
+
+function scrollRight (){
+    galleryContainer.style.transform = `translateX(${counterRight*400}px)`;
+    counterRight++;
+}
