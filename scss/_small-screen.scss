@@ -11,9 +11,18 @@
       background-color: transparent;
       width: 40px;
       height: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
 
       .icon-bar {
@@ -21,10 +30,23 @@
         width: 25px;
         height: 4px;
         margin: 2px;
+        -webkit-transition: background-color 0.2s ease-in-out,
+        opacity 0.2s ease-in-out,
+        -webkit-transform 0.2s ease-in-out;
+        transition: background-color 0.2s ease-in-out,
+        opacity 0.2s ease-in-out,
+        -webkit-transform 0.2s ease-in-out;
+        -o-transition: background-color 0.2s ease-in-out,
+        transform 0.2s ease-in-out,
+        opacity 0.2s ease-in-out;
         transition: background-color 0.2s ease-in-out,
         transform 0.2s ease-in-out,
         opacity 0.2s ease-in-out;
-        background-color: $navbar-text-color;
+        transition: background-color 0.2s ease-in-out,
+        transform 0.2s ease-in-out,
+        opacity 0.2s ease-in-out,
+        -webkit-transform 0.2s ease-in-out;
+        background-color: #30333C;
       }
 
     }
@@ -38,15 +60,17 @@
       position: fixed;
       top: $navbar-height;
       bottom: 0;
+      -webkit-transition: opacity 0.2s ease-in-out,
+      visibility 0.2s ease-in-out;
+      -o-transition: opacity 0.2s ease-in-out,
+      visibility 0.2s ease-in-out;
       transition: opacity 0.2s ease-in-out,
-                  visibility 0.2s ease-in-out;
+      visibility 0.2s ease-in-out;
       opacity: 0;
       visibility: hidden;
       left: 0;
       right: 0;
     }
-
-
   }
 }
 
@@ -60,7 +84,7 @@
   }
 
   #navbar.opened .navbar-toggle .icon-bar:first-child {
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);    -ms-transform: rotate(45deg);    transform: rotate(45deg);
   }
 
   #navbar.opened .navbar-toggle .icon-bar:nth-child(2) {
@@ -68,25 +92,34 @@
   }
 
   #navbar.opened .navbar-toggle .icon-bar:last-child {
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);    -ms-transform: rotate(-45deg);    transform: rotate(-45deg);
   }
 
   #navbar.opened .navbar-menu {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     visibility: visible;
   }
 
   .navbar-links {
+    background-color: rgba(0, 0, 0, 0.9);
     list-style-type: none;
     max-height: 0;
     overflow: hidden;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     left: 0;
     right: 0;
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 
     .navbar-item{
@@ -94,6 +127,17 @@
       width: 100%;
       border-radius: 5px;
       text-align: center;
+      font-weight: 600;
+      border-bottom: 3px solid #d3d3d3;
+
+      .navbar-item:hover{
+        cursor: pointer;
+      }
+
+      .navbar-link {
+        color: #d3d3d3;
+        font-size: 1.5rem;
+      }
     }
   }
 

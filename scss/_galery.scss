@@ -1,0 +1,29 @@
+.gallery-container {
+  width: 100%;
+  height: 800px;
+  background-color: $general-light-blue-color;
+  position: relative;
+
+  .test {
+    width: 35%;
+    min-width: 350px;
+    margin-left: 3rem;
+  }
+
+  &-white{
+    width: 66%;
+    min-width: 300px;
+    height: 83%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top-left-radius: 350px;
+  }
+
+  .main-title {
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+  }
+}
+

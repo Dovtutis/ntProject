@@ -1,0 +1,41 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
+  max-width: 1800px;
+}
+
+//Margin & Padding classes
+
+$spaceAmounts: (1, 2, 3, 4, 5);
+
+@each $space in $spaceAmounts{
+  .m-#{$space}{
+    margin: #{$space}rem;
+  }
+
+  .mx-#{$space}{
+    margin-left: #{$space}rem;
+    margin-right: #{$space}rem;
+  }
+
+  .my-#{$space}{
+    margin-top: #{$space}rem;
+    margin-bottom: #{$space}rem;
+  }
+
+  .p-#{$space}{
+    padding: #{$space}rem;
+  }
+
+  .px-#{$space}{
+    padding-left: #{$space}rem;
+    padding-right: #{$space}rem;
+  }
+
+  .py-#{$space}{
+    padding-top: #{$space}rem;
+    padding-bottom: #{$space}rem;
+  }
+}
