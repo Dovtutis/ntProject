@@ -1,6 +1,7 @@
 .gallery-container {
   width: 100%;
   height: 800px;
+  min-width: 550px;
   background-color: $general-light-blue-color;
   position: relative;
   z-index: 0;
@@ -35,7 +36,6 @@
     overflow-x: hidden;
 
     .white-effect-bar{
-      display: block;
       position: absolute;
       right: 0;
       bottom: 0;

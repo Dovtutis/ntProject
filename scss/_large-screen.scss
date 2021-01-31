@@ -1,4 +1,4 @@
-@media(min-width: 1250px) {
+@media only screen and (min-width: 1250px) {
   .main-title{
     font-size: 3.7rem;
   }
@@ -6,10 +6,11 @@
   .navbar-link {
     color: #30333C;
   }
+
+  //GALLERY
+
+  .white-effect-bar {
+    display: block;
+  }
 }
 
-//GALLERY
-
-.white-effect-bar {
-  display: block;
-}
