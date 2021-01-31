@@ -1,4 +1,4 @@
-@media(max-width: 640px){
+@media only screen and (max-width: 640px) {
 
 #navbar {
 
@@ -146,4 +146,10 @@
     max-height: none;
   }
 
+}
+
+//GALLERY
+
+.white-effect-bar {
+  display: none;
 }

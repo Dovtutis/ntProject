@@ -36,15 +36,21 @@ const scrollRightButton = document.getElementById('scroll-right-button');
 const galleryContainer = document.querySelector('.sliding-container');
 scrollLeftButton.addEventListener('click', scrollLeft);
 scrollRightButton.addEventListener('click', scrollRight);
-let counterLeft = 1;
-let counterRight = 1;
+
+let coordinate = 0;
+let maxCoordinateLeft = -4 * 450;
+let maxCoordinateRight = 3 * 450;
 
 function scrollLeft (){
-    galleryContainer.style.transform = `translateX(-${counterLeft*400}px)`;
-    counterLeft++;
+    if (coordinate > maxCoordinateLeft){
+        galleryContainer.style.transform = `translateX(${coordinate-450}px)`;
+        coordinate -= 450;
+    }
 }
 
 function scrollRight (){
-    galleryContainer.style.transform = `translateX(${counterRight*400}px)`;
-    counterRight++;
+    if (coordinate < maxCoordinateRight){
+        galleryContainer.style.transform = `translateX(${coordinate+450}px)`;
+        coordinate += 450;
+    }
 }

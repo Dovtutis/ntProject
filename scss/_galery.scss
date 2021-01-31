@@ -20,17 +20,6 @@
     bottom: 0;
     right: 0;
     border-top-left-radius: 350px;
-
-    .white-effect-bar{
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      height: 100%;
-      width: 350px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.17408961875765927) 0%,
-              rgba(255,255,255,0.45420166357558645) 50%, rgba(255,255,255,0.8911764534915528) 100%);
-      z-index: 2;
-    }
   }
 
   .main-title {
@@ -39,17 +28,29 @@
   }
 
   &-inner{
-    width: 88%;
+    width: 100%;
     height: 630px;
-    position: absolute;
-    bottom: -100;
-    right: 0;
+    position: relative;
     overflow-y: hidden;
     overflow-x: hidden;
 
+    .white-effect-bar{
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 20%;
+      background: linear-gradient(90deg, rgba(255,255,255,0.17408961875765927) 0%,
+              rgba(255,255,255,0.45420166357558645) 50%, rgba(255,255,255,0.8911764534915528) 100%);
+      z-index: 2;
+    }
+
     .sliding-container{
-      width: 100%;
+      width: 88%;
       display: flex;
+      position: absolute;
+      right: 0;
       scroll-behavior: smooth;
       transition: 1s ease-in-out;
 
@@ -66,7 +67,7 @@
         .card-image{
           height: 55%;
           width: 100%;
-          border-radius: 0 100px 0 0;
+          border-radius: 10px 100px 0 0;
         }
 
         .text-container {
