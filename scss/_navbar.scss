@@ -8,6 +8,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   z-index: 1;
   background-color: #fff;
+  padding: 0.5rem calc((100vw - 1367px) /2);
 
   &-container {
     display: -webkit-box;

@@ -39,7 +39,7 @@ scrollRightButton.addEventListener('click', scrollRight);
 
 let coordinate = 0;
 let maxCoordinateLeft = -4 * 450;
-let maxCoordinateRight = 3 * 450;
+let maxCoordinateRight = 2 * 450;
 
 function scrollLeft (){
     if (coordinate > maxCoordinateLeft){

@@ -147,9 +147,18 @@
   }
 
   //GALLERY
-  .white-effect-bar {
-    display: none;
-  }
 
+  .gallery-container {
+    .test {
+      .main-title {
+        font-size: 1.5rem;
+      }
+    }
+    &-inner {
+      .white-effect-bar {
+        display: none;
+      }
+    }
+  }
 }
 

@@ -25,6 +25,14 @@ $spaceAmounts: (1, 2, 3, 4, 5);
     margin-bottom: #{$space}rem;
   }
 
+  .mt-#{$space}{
+    margin-top: #{$space}rem;
+  }
+
+  .mb-#{$space}{
+    margin-bottom: #{$space}rem;
+  }
+
   .p-#{$space}{
     padding: #{$space}rem;
   }
@@ -36,6 +44,14 @@ $spaceAmounts: (1, 2, 3, 4, 5);
 
   .py-#{$space}{
     padding-top: #{$space}rem;
+    padding-bottom: #{$space}rem;
+  }
+
+  .pt-#{$space}{
+    padding-top: #{$space}rem;
+  }
+
+  .pb-#{$space}{
     padding-bottom: #{$space}rem;
   }
 }
