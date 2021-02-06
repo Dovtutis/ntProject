@@ -291,7 +291,7 @@
 .gallery-container {
   width: 100%;
   height: 700px;
-  min-width: 550px;
+  min-width: 450px;
   padding: 0.5rem calc((100vw - 1367px) /2);
   background-color: #E8F1FF;
   position: relative;
