@@ -3,7 +3,7 @@
 #navbar {
 
   .container {
-    min-width: 320px;
+    min-width: 280px;
 
     .navbar-toggle {
       cursor: pointer;
@@ -149,14 +149,56 @@
   //GALLERY
 
   .gallery-container {
-    .test {
+    height: 560px;
+
+    .title {
+      padding-top: 0;
+      padding-bottom: 1rem;
+
       .main-title {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
       }
     }
     &-inner {
       .white-effect-bar {
         display: none;
+      }
+
+      .button-left{
+        font-size: 0.8rem;
+        margin-left: 0.4rem;
+        width: 35px;
+        height: 35px;
+        bottom: 50%;
+      }
+      .button-right{
+        font-size: 0.8rem;
+        margin-right: 0.4rem;
+        width: 35px;
+        height: 35px;
+        bottom: 50%;
+      }
+    }
+    .sliding-container{
+      .card{
+        min-width: 250px;
+        margin-left: 0.5rem;
+        margin-right: 1.5rem;
+
+        .text-container{
+          padding: 0 1rem;
+
+          h2 {
+            line-height: 1.1rem;
+            font-size: 0.9rem;
+          }
+
+          p {
+            text-align: justify;
+            font-size: 0.8rem;
+            line-height: 1rem;
+          }
+        }
       }
     }
   }

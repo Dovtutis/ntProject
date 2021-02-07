@@ -12,6 +12,7 @@
   box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
   position: absolute;
   z-index: 4;
+  margin-left: 2rem;
 }
 
 %scroll-button:hover {
@@ -20,13 +21,12 @@
 
 .button-left{
   @extend %scroll-button;
-  bottom: 50%;
-  margin-left: 1.5rem;
+  bottom: 55%;
 }
 
 .button-right{
   @extend %scroll-button;
-  bottom: 50%;
+  bottom: 55%;
   right: 0;
-  margin-right: 1.5rem;
+  margin-right: 0.5rem;
 }

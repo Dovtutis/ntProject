@@ -1,7 +1,4 @@
 @media only screen and (min-width: 640px) and (max-width: 1367px) {
-  .main-title{
-    font-size: 2rem;
-  }
 
  .navbar-link {
    color: #30333C;
@@ -9,20 +6,49 @@
 
   //GALLERY
 
-  .white-effect-bar {
-    display: none;
-  }
-
-  .card {
-    h2 {
-      font-size: 1.3rem;
+  .gallery-container {
+    height: 750px;
+    .title {
+      .main-title {
+        font-size: 2rem;
+      }
+    }
+    .gallery-container-white{
+      .white-effect-bar {
+        display: none;
+      }
     }
 
-    p {
-      font-size: 1rem;
-      line-height: 1.2rem;
+    &-inner {
+
+      .button-left{
+        bottom: 60%;
+      }
+      .button-right{
+        bottom: 60%;
+      }
+
+      .sliding-container{
+        .card{
+          margin: 0 2rem;
+          min-width: 250px;
+          .text-container{
+            padding: 0 1rem;
+
+            h2 {
+              line-height: 1.4rem;
+              font-size: 1.2rem;
+            }
+
+            p {
+              text-align: justify;
+              font-size: 1rem;
+              line-height: 1.2rem;
+            }
+          }
+        }
+      }
     }
   }
-
 }
 

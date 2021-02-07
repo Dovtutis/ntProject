@@ -1,0 +1,39 @@
+@media only screen and (max-width: 320px){
+
+  .gallery-container {
+    height: 500px;
+
+    .title {
+      min-width: 250px;
+      margin-left: 1rem;
+
+      .main-title {
+        font-size: 0.7rem;
+      }
+    }
+
+    .sliding-container{
+      .card{
+        min-width: 200px;
+        margin-left: 0.5rem;
+        margin-right: 1.5rem;
+
+        .text-container{
+          padding: 0 0.5rem;
+
+          h2 {
+            line-height: 1rem;
+            font-size: 0.8rem;
+          }
+
+          p {
+            text-align: justify;
+            font-size: 0.7rem;
+            line-height: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+

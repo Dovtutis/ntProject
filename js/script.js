@@ -38,19 +38,22 @@ scrollLeftButton.addEventListener('click', scrollLeft);
 scrollRightButton.addEventListener('click', scrollRight);
 
 let coordinate = 0;
-let maxCoordinateLeft = -4 * 450;
-let maxCoordinateRight = 2 * 450;
 
 function scrollLeft (){
+    let cardWidth = document.querySelector('.card').offsetWidth;
+    let maxCoordinateLeft = -6 * cardWidth;
+
     if (coordinate > maxCoordinateLeft){
-        galleryContainer.style.transform = `translateX(${coordinate-450}px)`;
-        coordinate -= 450;
+        galleryContainer.style.transform = `translateX(${coordinate-(cardWidth * 1.3)}px)`;
+        coordinate -= cardWidth * 1.3;
     }
 }
 
 function scrollRight (){
+    let cardWidth = document.querySelector('.card').offsetWidth;
+    let maxCoordinateRight = 2 * cardWidth;
     if (coordinate < maxCoordinateRight){
-        galleryContainer.style.transform = `translateX(${coordinate+450}px)`;
-        coordinate += 450;
+        galleryContainer.style.transform = `translateX(${coordinate+(cardWidth * 1.3)}px)`;
+        coordinate += cardWidth * 1.3;
     }
 }

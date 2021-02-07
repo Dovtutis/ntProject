@@ -3,18 +3,37 @@
     color: #30333C;
   }
 
+
+  //GALLERY
   .gallery-container {
-    .test {
+    .title {
       .main-title {
         font-size: 2.5rem;
       }
     }
-  }
+    .gallery-container-white{
+      .white-effect-bar {
+        display: block;
+      }
+    }
 
-  //GALLERY
+    .sliding-container{
+      .card{
+        .text-container{
+          padding: 0 2rem;
 
-  .white-effect-bar {
-    display: block;
+          h2 {
+            line-height: 1.8rem;
+            font-size: 1.7rem;
+          }
+
+          p {
+            text-align: justify;
+            line-height: 1.6rem;
+          }
+        }
+      }
+    }
   }
 }
 
