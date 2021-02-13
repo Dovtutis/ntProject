@@ -69,6 +69,7 @@ function createGalleryCards (imagesArray){
         let textContainer = document.createElement("div");
         textContainer.classList.add("text-container");
         let headline = document.createElement("h2");
+        headline.innerText = "Lorem ipsum dolor sit amet";
         headline.classList.add("py-1");
         let paragraph = document.createElement("p");
         paragraph.innerText = "Lorem ipsum dolor sit amet in nam, consectetur adipisicing elit. Fugit hic, impedit in nam odio quia?"

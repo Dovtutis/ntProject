@@ -207,5 +207,30 @@
       }
     }
   }
+
+//  TABLE
+
+  .table-container {
+    .buttons-container{
+      margin: 50px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .table-button{
+        font-size: 12px;
+        margin: 10px 25px;
+        padding: 15px 25px;
+        .button-text {
+          min-width: 150px;
+          .table-arrow {
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+
 }
 

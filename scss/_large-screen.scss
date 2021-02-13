@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1250px) {
+@media only screen and (min-width: 1367px) {
   .navbar-link {
     color: #30333C;
   }
@@ -41,5 +41,35 @@
       }
     }
   }
+
+  // TABLE
+
+  .table-container {
+    .buttons-container{
+      margin: 50px 25px;
+      display: flex;
+      .table-button{
+        font-size: 20px;
+        margin: 50px 25px;
+        padding: 15px 25px;
+        .button-text {
+          min-width: 200px;
+          .table-arrow {
+            padding-left: 16px;
+          }
+        }
+      }
+    }
+  }
+
+
+
 }
+
+
+
+
+
+
+
 
