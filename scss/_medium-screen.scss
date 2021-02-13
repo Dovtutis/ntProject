@@ -32,6 +32,12 @@
         .card{
           margin: 0 2rem;
           min-width: 250px;
+
+          .card-image {
+            max-height: 300px;
+            min-height: 300px;
+          }
+
           .text-container{
             padding: 0 1rem;
 

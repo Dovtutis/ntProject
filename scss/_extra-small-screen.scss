@@ -18,6 +18,11 @@
         margin-left: 0.5rem;
         margin-right: 1.5rem;
 
+        .card-image {
+          max-height: 200px;
+          min-height: 200px;
+        }
+
         .text-container{
           padding: 0 0.5rem;
 

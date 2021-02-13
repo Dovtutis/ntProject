@@ -19,6 +19,12 @@
 
     .sliding-container{
       .card{
+
+        .card-image {
+          max-height: 350px;
+          min-height: 350px;
+        }
+
         .text-container{
           padding: 0 2rem;
 
