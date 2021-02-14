@@ -25,6 +25,14 @@ body {
   height: 1000px;
 }
 
+.display-flex {
+  display: flex;
+}
+
+.display-none {
+  display: none;
+}
+
 @import "large-screen";
 @import "medium-screen";
 @import "small-screen";

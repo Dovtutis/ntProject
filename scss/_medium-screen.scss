@@ -69,6 +69,8 @@
         padding: 15px 10px;
         .button-text {
           white-space: nowrap;
+          min-width: 155px;
+          @media only screen and (min-width: 640px) and (max-width: 900px){min-width: 90px;}
           padding: 0 20px;
           @media only screen and (min-width: 640px) and (max-width: 900px){padding: 0 5px;}
           .table-arrow {

@@ -33,7 +33,9 @@ function closeMobileNavbar() {
 
 const scrollLeftButton = document.getElementById('scroll-left-button');
 const scrollRightButton = document.getElementById('scroll-right-button');
+const sizeButton = document.getElementById('size-button');
 const galleryContainer = document.querySelector('.sliding-container');
+const sizeSelectionEl = document.getElementById('size-select-box');
 const requestUrl = 'https://api.unsplash.com/search/collections?page=1&per_page=6&query=home interior&client_id=IW3u5fbyKrQ1PDWZn5ZLo56AoiSLuOBxR6Fjb76YkCI';
 const imagesArray = [];
 let coordinate = 0;
@@ -42,6 +44,7 @@ let coordinate = 0;
 
 scrollLeftButton.addEventListener('click', scrollLeft);
 scrollRightButton.addEventListener('click', scrollRight);
+sizeButton.addEventListener('click', showSelections);
 
 
 getImages();
@@ -86,19 +89,6 @@ function createGalleryCards (imagesArray){
     })
 }
 
-// <div className="card">
-//     <img src="https://i.pinimg.com/originals/5b/65/31/5b65311e67cdc2ab9b5b1ba8516878cb.jpg"
-//          alt="" className="card-image">
-//         <div className="text-container">
-//             <h2 className="py-1">Lorem ipsum dolor sit amet</h2>
-//             <p>
-//                 Lorem ipsum dolor sit amet in nam, consectetur adipisicing elit. Fugit hic, impedit
-//                 in nam odio quia?
-//             </p>
-//             <i className="fas fa-arrow-right pb-2"></i>
-//         </div>
-// </div>
-
 function scrollLeft (){
     let cardWidth = document.querySelector('.card').offsetWidth;
     let maxCoordinateLeft = -6 * cardWidth;
@@ -116,4 +106,11 @@ function scrollRight (){
         galleryContainer.style.transform = `translateX(${coordinate+(cardWidth * 1.3)}px)`;
         coordinate += cardWidth * 1.3;
     }
+}
+
+function showSelections () {
+    sizeSelectionEl.classList.toggle("display-none");
+    sizeSelectionEl.classList.toggle("display-flex");
+    sizeButton.classList.toggle("border-radius-closed");
+    sizeButton.classList.toggle("border-radius-open");
 }

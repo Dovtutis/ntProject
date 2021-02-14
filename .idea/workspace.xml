@@ -9,11 +9,9 @@
       <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_buttons.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/_config.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_config.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_galery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_galery.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/_large-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_large-screen.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/_medium-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_medium-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_small-screen.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_small-screen.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_utilities.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/_table.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/_table.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/style.scss" afterDir="false" />
@@ -76,7 +74,8 @@
       <workItem from="1612609470795" duration="9194000" />
       <workItem from="1612690431513" duration="5189000" />
       <workItem from="1612866223008" duration="1336000" />
-      <workItem from="1613210672271" duration="14578000" />
+      <workItem from="1613210672271" duration="14799000" />
+      <workItem from="1613294687618" duration="3642000" />
     </task>
     <servers />
   </component>

@@ -60,16 +60,24 @@
             <article>
                 <div class="table-container">
                     <div class="buttons-container">
-                        <button id="size" class="table-button">
-                            <div class="button-text">Plotas <i class="fas fa-chevron-down table-arrow"></i></div>
-                        </button>
-                        <button id="room-quantity" class="table-button">
+                        <div class="size-selection-box">
+                            <button id="size-button" class="table-button border-radius-closed">
+                                <div class="button-text">Plotas <i class="fas fa-chevron-down table-arrow"></i></div>
+                            </button>
+                            <div class="button-select-box display-none" id="size-select-box">
+                                <div><45 kvm.</div>
+                                <div>45-65 kvm.</div>
+                                <div>>65 kvm.</div>
+                            </div>
+                        </div>
+
+                        <button id="room-quantity" class="table-button border-radius-closed">
                             <div class="button-text">Kambarių skaičius <i class="fas fa-chevron-down table-arrow"></i></div>
                         </button>
-                        <button id="window-quantity" class="table-button">
+                        <button id="window-quantity" class="table-button border-radius-closed">
                             <div class="button-text">Langų orientacija <i class="fas fa-chevron-down table-arrow"></i></div>
                         </button>
-                        <button id="done-status" class="table-button">
+                        <button id="done-status" class="table-button border-radius-closed">
                             <div class="button-text">Baigtumas <i class="fas fa-chevron-down table-arrow"></i></div>
                         </button>
                     </div>
