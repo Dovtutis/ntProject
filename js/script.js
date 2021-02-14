@@ -108,9 +108,10 @@ function scrollRight (){
     }
 }
 
-function showSelections () {
-    sizeSelectionEl.classList.toggle("display-none");
-    sizeSelectionEl.classList.toggle("display-flex");
-    sizeButton.classList.toggle("border-radius-closed");
-    sizeButton.classList.toggle("border-radius-open");
+function showSelections (event) {
+    console.log(event)
+    event.path[2].children[1].classList.toggle("display-none");
+    event.path[2].children[1].classList.toggle("display-flex");
+    event.path[2].children[0].classList.toggle("border-radius-closed");
+    event.path[2].children[0].classList.toggle("border-radius-open");
 }
