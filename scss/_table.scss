@@ -1,10 +1,10 @@
 
 .table-container {
   width: 100%;
-  margin-bottom: 2rem;
   border-radius: 1.5rem;
   box-shadow: 0 0 18px 0 rgba(0,0,0,0.4);
   z-index: 1;
+  margin: 0 1rem;
 
   .buttons-container{
     display: flex;
@@ -44,6 +44,27 @@
           background-color: $table-buttons-color;
         }
 
+      }
+    }
+  }
+  .table{
+    width: 100%;
+    thead {
+      .table-row {
+        padding: 0 25px;
+        th {
+          padding: 20px 5px;
+          text-align: start;
+        }
+      }  
+    }
+    tbody {
+      .table-row {
+        padding: 0 25px;
+        td {
+          padding: 20px 5px;
+          text-align: start;
+        }
       }
     }
   }

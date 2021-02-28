@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>NT Project</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/42762d49f1.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
+
 <body>
     <header id="navbar" class="navbar">
         <nav class="container navbar-container">
@@ -56,7 +60,7 @@
                 </div>
             </div>
         </article>
-        <div class="container">
+        <div class="container mb-5">
             <article>
                 <div class="table-container">
                     <div class="buttons-container">
@@ -65,47 +69,73 @@
                                 <div class="button-text">Plotas <i class="fas fa-chevron-down table-arrow"></i></div>
                             </button>
                             <div class="button-select-box display-none" id="size-select-box">
-                                <div><45 kvm.</div>
-                                <div>45-65 kvm.</div>
-                                <div>>65 kvm.</div>
+                                <div>
+                                    <45 kvm.</div>
+                                        <div>45-65 kvm.</div>
+                                        <div>>65 kvm.</div>
+                                </div>
+                            </div>
+                            <div class="selection-box">
+                                <button id="room-selection-button" class="table-button border-radius-closed">
+                                    <div class="button-text">Kambarių skaičius <i
+                                            class="fas fa-chevron-down table-arrow"></i></div>
+                                </button>
+                                <div class="button-select-box display-none" id="room-select-box">
+                                    <div>1</div>
+                                    <div>2</div>
+                                    <div>3</div>
+                                    <div>4</div>
+                                </div>
+                            </div>
+                            <div class="selection-box">
+                                <button id="window-quantity" class="table-button border-radius-closed">
+                                    <div class="button-text">Langų orientacija <i
+                                            class="fas fa-chevron-down table-arrow"></i></div>
+                                </button>
+                                <div class="button-select-box display-none" id="direction-select-box">
+                                    <div>Šiaurė</div>
+                                    <div>Pietūs</div>
+                                    <div>Rytai</div>
+                                    <div>Vakarai</div>
+                                </div>
+                            </div>
+                            <div class="selection-box">
+                                <button id="done-status" class="table-button border-radius-closed">
+                                    <div class="button-text">Baigtumas <i class="fas fa-chevron-down table-arrow"></i>
+                                    </div>
+                                </button>
+                                <div class="button-select-box display-none" id="progress-status-select-box">
+                                    <div>Pastatyta</div>
+                                    <div>Statoma</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="selection-box">
-                            <button id="room-selection-button" class="table-button border-radius-closed">
-                                <div class="button-text">Kambarių skaičius <i class="fas fa-chevron-down table-arrow"></i></div>
-                            </button>
-                            <div class="button-select-box display-none" id="room-select-box">
-                                <div>1</div>
-                                <div>2</div>
-                                <div>3</div>
-                                <div>4</div>
-                            </div>
-                        </div>
-                        <div class="selection-box">
-                            <button id="window-quantity" class="table-button border-radius-closed">
-                                <div class="button-text">Langų orientacija <i class="fas fa-chevron-down table-arrow"></i></div>
-                            </button>
-                            <div class="button-select-box display-none" id="direction-select-box">
-                                <div>Šiaurė</div>
-                                <div>Pietūs</div>
-                                <div>Rytai</div>
-                                <div>Vakarai</div>
-                            </div>
-                        </div>
-                        <div class="selection-box">
-                            <button id="done-status" class="table-button border-radius-closed">
-                                <div class="button-text">Baigtumas <i class="fas fa-chevron-down table-arrow"></i></div>
-                            </button>
-                            <div class="button-select-box display-none" id="progress-status-select-box">
-                                <div>Pastatyta</div>
-                                <div>Statoma</div>
-                            </div>
-                        </div>
+                        <table class="table">
+                            <thead>
+                                <tr class="table-row">
+                                    <th>Nuolaida</th>
+                                    <th>Namo nr.</th>
+                                    <th>Plotas m2</th>
+                                    <th>Kambarių skaičius</th>
+                                    <th>Langų orientacija</th>
+                                    <th>Baigtumas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table-row">
+                                    <td>-5%</td>
+                                    <td>1</td>
+                                    <td>50.17</td>
+                                    <td>3</td>
+                                    <td>Pietūs</td>
+                                    <td>Pastatyta</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                </div>
             </article>
         </div>
     </main>
 </body>
-</html>
 
+</html>
