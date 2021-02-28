@@ -11,14 +11,8 @@
   padding: 0.5rem calc((100vw - 1367px) /2);
 
   &-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     height: 100%;
 
@@ -34,21 +28,13 @@
     .navbar-menu {
 
       .navbar-links {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
         list-style-type: none;
-        -webkit-transition: color .3s ease-in-out;
-        -o-transition: color .3s ease-in-out;
         transition: color .3s ease-in-out;
 
         .navbar-link {
           text-decoration: none;
-          -webkit-transition: .3s;
-          -o-transition: .3s;
           transition: .3s;
         }
 
@@ -57,7 +43,7 @@
         }
 
         .navbar-item:hover {
-          -webkit-transform: scale(.97);          -ms-transform: scale(.97);          transform: scale(.97);
+          transform: scale(.97);
         }
       }
     }

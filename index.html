@@ -36,7 +36,7 @@
     <main class="main">
         <article>
             <div class="gallery-container">
-                <div class="py-3 title">
+                <div class="title">
                     <h1 class="main-title">Lorem ipsum dolor sit amet conset</h1>
                 </div>
                 <div class="gallery-container-white">
@@ -81,12 +81,26 @@
                                 <div>4</div>
                             </div>
                         </div>
-                        <button id="window-quantity" class="table-button border-radius-closed">
-                            <div class="button-text">Langų orientacija <i class="fas fa-chevron-down table-arrow"></i></div>
-                        </button>
-                        <button id="done-status" class="table-button border-radius-closed">
-                            <div class="button-text">Baigtumas <i class="fas fa-chevron-down table-arrow"></i></div>
-                        </button>
+                        <div class="selection-box">
+                            <button id="window-quantity" class="table-button border-radius-closed">
+                                <div class="button-text">Langų orientacija <i class="fas fa-chevron-down table-arrow"></i></div>
+                            </button>
+                            <div class="button-select-box display-none" id="direction-select-box">
+                                <div>Šiaurė</div>
+                                <div>Pietūs</div>
+                                <div>Rytai</div>
+                                <div>Vakarai</div>
+                            </div>
+                        </div>
+                        <div class="selection-box">
+                            <button id="done-status" class="table-button border-radius-closed">
+                                <div class="button-text">Baigtumas <i class="fas fa-chevron-down table-arrow"></i></div>
+                            </button>
+                            <div class="button-select-box display-none" id="progress-status-select-box">
+                                <div>Pastatyta</div>
+                                <div>Statoma</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>

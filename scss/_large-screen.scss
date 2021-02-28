@@ -7,6 +7,7 @@
   //GALLERY
   .gallery-container {
     .title {
+      padding: 3rem 0;
       .main-title {
         font-size: 2.5rem;
       }
@@ -19,7 +20,7 @@
 
     .sliding-container{
       .card{
-
+        
         .card-image {
           max-height: 350px;
           min-height: 350px;
@@ -45,12 +46,21 @@
   // TABLE
 
   .table-container {
+    margin-top: 100px;
     .buttons-container{
       margin: 50px 25px;
       display: flex;
+      .selection-box{
+        .button-select-box{
+          top: 75px;
+          div {
+            padding: 15px 25px;
+          }
+        }
+      }
       .table-button{
         font-size: 20px;
-        margin: 50px 0;
+        margin: 25px 0;
         padding: 15px 25px;
         .button-text {
           min-width: 200px;
@@ -61,9 +71,6 @@
       }
     }
   }
-
-
-
 }
 
 
