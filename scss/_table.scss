@@ -11,8 +11,12 @@
     display: flex;
     justify-content: space-between;
 
-    .size-selection-box{
+    .selection-box{
       position: relative;
+
+      .button-text {
+        pointer-events: none;
+      }
 
       .table-arrow {
         pointer-events: none;

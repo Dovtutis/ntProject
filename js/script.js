@@ -33,9 +33,10 @@ function closeMobileNavbar() {
 
 const scrollLeftButton = document.getElementById('scroll-left-button');
 const scrollRightButton = document.getElementById('scroll-right-button');
-const sizeButton = document.getElementById('size-button');
+const sizeButton = document.getElementById('size-selection-button');
+const roomButton = document.getElementById('room-selection-button');
 const galleryContainer = document.querySelector('.sliding-container');
-const sizeSelectionEl = document.getElementById('size-select-box');
+const selectionButtons = document.querySelectorAll('.table-button');
 const requestUrl = 'https://api.unsplash.com/search/collections?page=1&per_page=6&query=home interior&client_id=IW3u5fbyKrQ1PDWZn5ZLo56AoiSLuOBxR6Fjb76YkCI';
 const imagesArray = [];
 let coordinate = 0;
@@ -44,8 +45,10 @@ let coordinate = 0;
 
 scrollLeftButton.addEventListener('click', scrollLeft);
 scrollRightButton.addEventListener('click', scrollRight);
-sizeButton.addEventListener('click', showSelections);
 
+selectionButtons.forEach((button) => {
+    button.addEventListener('click', showSelections);
+});
 
 getImages();
 
@@ -110,8 +113,8 @@ function scrollRight (){
 
 function showSelections (event) {
     console.log(event)
-    event.path[2].children[1].classList.toggle("display-none");
-    event.path[2].children[1].classList.toggle("display-flex");
-    event.path[2].children[0].classList.toggle("border-radius-closed");
-    event.path[2].children[0].classList.toggle("border-radius-open");
+    event.path[1].children[1].classList.toggle("display-none");
+    event.path[1].children[1].classList.toggle("display-flex");
+    event.path[1].children[0].classList.toggle("border-radius-closed");
+    event.path[1].children[0].classList.toggle("border-radius-open");
 }
