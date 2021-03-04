@@ -212,7 +212,7 @@
       align-items: center;
       .selection-box{
         .button-select-box{
-          top: 53px;
+          top: 45px;
           div {
             font-size: 12px;
             padding: 10px 15px;
@@ -221,7 +221,7 @@
       }
       .table-button{
         font-size: 12px;
-        margin: 10px 0;
+        margin-top: 10px;
         padding: 15px 25px;
         .button-text {
           min-width: 150px;
@@ -235,9 +235,7 @@
       width: 100%;
       font-size: 12px;
       @media only screen and (min-width: 640px) and (max-width: 900px){font-size: 12px;}
-      tr {
-
-      }
+      
       th, td {
         padding: 5px;
         text-align: start;

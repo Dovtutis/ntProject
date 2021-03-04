@@ -52,6 +52,8 @@
       display: flex;
       .selection-box{
         .button-select-box{
+          position: absolute;
+          left: 0;
           top: 75px;
           div {
             padding: 15px 25px;
