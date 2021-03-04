@@ -60,11 +60,19 @@
   //TABLE
 
   .table-container {
-    margin-top: 50px;
-    padding: 25px 25px;
+    margin: 50px 25px;
     .buttons-container{
       justify-content: space-around;
-      margin: 0 25px;
+      .selection-box{
+        .button-select-box{
+          top: 68px;
+          div {
+            padding: 10px 20px;
+            font-size: 16px;
+            @media only screen and (min-width: 640px) and (max-width: 900px){font-size: 12px;}
+          }
+        }
+      }
       .table-button{
         font-size: 16px;
         @media only screen and (min-width: 640px) and (max-width: 900px){font-size: 12px;}
@@ -80,6 +88,19 @@
             padding-left: 8px;
           }
         }
+      }
+    }
+    .table{
+      width: 100%;
+      font-size: 16px;
+      @media only screen and (min-width: 640px) and (max-width: 900px){font-size: 12px;}
+      th, td {
+        padding: 10px;
+        text-align: start;
+        vertical-align: top;
+      }
+      th:last-child, td:last-child {
+        padding-left: 4%;
       }
     }
   }

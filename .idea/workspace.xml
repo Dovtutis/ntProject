@@ -38,7 +38,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../wamp64/www/traversyMediaMVC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -64,6 +64,8 @@
       <workItem from="1612866223008" duration="1336000" />
       <workItem from="1613210672271" duration="14799000" />
       <workItem from="1613294687618" duration="6719000" />
+      <workItem from="1614546753624" duration="6000" />
+      <workItem from="1614631405483" duration="23000" />
     </task>
     <servers />
   </component>

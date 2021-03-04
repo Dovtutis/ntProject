@@ -66,19 +66,17 @@
                     <div class="buttons-container">
                         <div class="selection-box">
                             <button id="size-selection-button" class="table-button border-radius-closed">
-                                <div class="button-text">Plotas <i class="fas fa-chevron-down table-arrow"></i></div>
+                                <div class="button-text">Plotas<span><i class="fas fa-chevron-down table-arrow"></i></span></div>
                             </button>
                             <div class="button-select-box display-none" id="size-select-box">
-                                <div>
-                                    <45 kvm.</div>
-                                        <div>45-65 kvm.</div>
-                                        <div>>65 kvm.</div>
-                                </div>
+                                <div>45 kvm.</div>
+                                <div>45-65 kvm.</div>
+                                <div>>65 kvm.</div>
                             </div>
-                            <div class="selection-box">
+                        </div>
+                        <div class="selection-box">
                                 <button id="room-selection-button" class="table-button border-radius-closed">
-                                    <div class="button-text">Kambarių skaičius <i
-                                            class="fas fa-chevron-down table-arrow"></i></div>
+                                    <div class="button-text">Kambarių skaičius<span><i class="fas fa-chevron-down table-arrow"></i></span></div>
                                 </button>
                                 <div class="button-select-box display-none" id="room-select-box">
                                     <div>1</div>
@@ -86,11 +84,10 @@
                                     <div>3</div>
                                     <div>4</div>
                                 </div>
-                            </div>
-                            <div class="selection-box">
+                        </div>
+                        <div class="selection-box">
                                 <button id="window-quantity" class="table-button border-radius-closed">
-                                    <div class="button-text">Langų orientacija <i
-                                            class="fas fa-chevron-down table-arrow"></i></div>
+                                    <div class="button-text">Langų orientacija<span><i class="fas fa-chevron-down table-arrow"></i></span></div>
                                 </button>
                                 <div class="button-select-box display-none" id="direction-select-box">
                                     <div>Šiaurė</div>
@@ -98,41 +95,39 @@
                                     <div>Rytai</div>
                                     <div>Vakarai</div>
                                 </div>
-                            </div>
-                            <div class="selection-box">
+                        </div>
+                        <div class="selection-box">
                                 <button id="done-status" class="table-button border-radius-closed">
-                                    <div class="button-text">Baigtumas <i class="fas fa-chevron-down table-arrow"></i>
+                                    <div class="button-text">Baigtumas<span><i class="fas fa-chevron-down table-arrow"></i></span></i>
                                     </div>
                                 </button>
                                 <div class="button-select-box display-none" id="progress-status-select-box">
                                     <div>Pastatyta</div>
                                     <div>Statoma</div>
                                 </div>
-                            </div>
                         </div>
-                        <table class="table">
-                            <thead>
-                                <tr class="table-row">
-                                    <th>Nuolaida</th>
-                                    <th>Namo nr.</th>
-                                    <th>Plotas m2</th>
-                                    <th>Kambarių skaičius</th>
-                                    <th>Langų orientacija</th>
-                                    <th>Baigtumas</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-row">
-                                    <td>-5%</td>
-                                    <td>1</td>
-                                    <td>50.17</td>
-                                    <td>3</td>
-                                    <td>Pietūs</td>
-                                    <td>Pastatyta</td>
-                                </tr>
-                            </tbody>
-                        </table>
                     </div>
+                    <table class="table">
+                        <colgroup>
+                            <col span="3" style="width: 18%;">
+                            <col span="2" style="width: 14%;">
+                            <col span="1" style="width: 21%;">
+                          </colgroup>
+                        <thead>
+                            <tr class="table-row">
+                                <th>Nuolaida</th>
+                                <th>Namo nr.</th>
+                                <th>Plotas m2</th>
+                                <th>Kambarių skaičius</th>
+                                <th>Langų orientacija</th>
+                                <th>Baigtumas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+
+                        </tbody>
+                    </table>
+                </div>
             </article>
         </div>
     </main>

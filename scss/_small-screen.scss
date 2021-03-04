@@ -201,9 +201,10 @@
 //  TABLE
 
   .table-container {
-    width: 70%;
-    margin: 20px auto;
-    min-width: 250px;
+    width: 100%;
+    margin: 5px;
+    min-width: 240px;
+    overflow-x: auto;
     .buttons-container{
       display: flex;
       flex-direction: column;
@@ -211,7 +212,7 @@
       align-items: center;
       .selection-box{
         .button-select-box{
-          top: 55px;
+          top: 53px;
           div {
             font-size: 12px;
             padding: 10px 15px;
@@ -230,8 +231,20 @@
         }
       }
     }
-  }
+    .table{
+      width: 100%;
+      font-size: 12px;
+      @media only screen and (min-width: 640px) and (max-width: 900px){font-size: 12px;}
+      tr {
 
+      }
+      th, td {
+        padding: 5px;
+        text-align: start;
+        vertical-align: top;
+      }
+    }
+  }
 
 }
 

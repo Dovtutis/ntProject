@@ -37,8 +37,10 @@ const sizeButton = document.getElementById('size-selection-button');
 const roomButton = document.getElementById('room-selection-button');
 const galleryContainer = document.querySelector('.sliding-container');
 const selectionButtons = document.querySelectorAll('.table-button');
+const tableEl = document.getElementById('table-body');
 const requestUrl = 'https://api.unsplash.com/search/collections?page=1&per_page=6&query=home interior&client_id=IW3u5fbyKrQ1PDWZn5ZLo56AoiSLuOBxR6Fjb76YkCI';
 const imagesArray = [];
+const flatsArray = [];
 let coordinate = 0;
 
 //EVENT LISTENERS
@@ -51,6 +53,8 @@ selectionButtons.forEach((button) => {
 });
 
 getImages();
+generateFlatData();
+generateTable(flatsArray);
 
 async function getImages () {
     fetch(requestUrl)
@@ -117,4 +121,55 @@ function showSelections (event) {
     event.path[1].children[1].classList.toggle("display-flex");
     event.path[1].children[0].classList.toggle("border-radius-closed");
     event.path[1].children[0].classList.toggle("border-radius-open");
+    event.path[1].children[0].children[0].children[0].children[0].classList.toggle("fa-chevron-down");
+    event.path[1].children[0].children[0].children[0].children[0].classList.toggle("fa-chevron-up");
+}
+
+function generateFlatData () {
+    const discountArray = ['', '5%', '10%'];
+    const windowsArray = ['Pietūs', 'Rytai', 'Šiaurė', 'Vakarai'];
+    const finishStatusArray = ['Pastatyta', ' Statoma'];
+
+    function randomFlat(discount, number, size, room, windows, finishStatus) {
+        this.discount = discount;
+        this.number = number;
+        this.size = size;
+        this.room = room;
+        this.windows = windows;
+        this.finishStatus = finishStatus;
+    }
+
+    for (let x = 0; x < 12; x++) {
+        discount = discountArray[Math.floor(Math.random() * 3)],
+        number = Math.ceil(Math.random() * 2),
+        size = Math.floor(Math.random() * (60 - 35 + 1) ) + 35,
+        room = Math.ceil(Math.random() * 4),
+        windows = windowsArray[Math.floor(Math.random() * 3)],
+        finishStatus = finishStatusArray[Math.floor(Math.random() * 2)]
+
+        const flat = new randomFlat(discount, number, size, room, windows, finishStatus);
+        flatsArray.push(flat)
+    }
+}
+
+function generateTable(flats) {
+    flatsArray.forEach(flat => {
+        let backgroundColorClass = '';
+        if (flat.discount !== "") {
+            backgroundColorClass = "bg-light-blue";
+        }
+    
+        tableEl.innerHTML += 
+        `
+        <tr class="table-row ${backgroundColorClass}">
+            <td class="discount-table-data">-${flat.discount}</td>
+            <td>${flat.number}</td>
+            <td>${flat.size}.00</td>
+            <td>${flat.room}</td>
+            <td>${flat.windows}</td>
+            <td>${flat.finishStatus}</td>
+        </tr>
+        `
+    });
+
 }

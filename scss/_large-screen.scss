@@ -47,8 +47,8 @@
 
   .table-container {
     margin-top: 100px;
-    padding: 25px 50px;
     .buttons-container{
+      padding: 25px;
       display: flex;
       .selection-box{
         .button-select-box{
@@ -68,6 +68,21 @@
             padding-left: 16px;
           }
         }
+      }
+    }
+    .table{
+      width: 100%;
+      font-size: 20px;
+      th, td {
+        padding: 10px;
+        text-align: start;
+        vertical-align: top;
+      }
+      th:first-child, td:first-child {
+        padding-left: 2%;
+      }
+      th:last-child, td:last-child {
+        padding-left: 4%;
       }
     }
   }
