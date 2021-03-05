@@ -177,7 +177,7 @@ function generateFlatData () {
         number = Math.ceil(Math.random() * 2),
         size = Math.floor(Math.random() * (80 - 35 + 1) ) + 35,
         room = Math.ceil(Math.random() * 4),
-        windows = windowsArray[Math.floor(Math.random() * 4)],
+        windows = windowsArray[Math.floor(Math.random() * 3)],
         buildStatus = buildStatusArray[Math.floor(Math.random() * 2)]
 
         const flat = new randomFlat(discount, number, size, room, windows, buildStatus);
