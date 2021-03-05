@@ -126,11 +126,9 @@ const tableSearchMessageBox = document.getElementById('table-search-message-box'
 const tableEl = document.getElementById('table-body');
 const flatsArray = [];
 
-sizeButton.addEventListener('click', showSelections);
-
-// selectionButtons.forEach((button) => {
-//     button.addEventListener('click', showSelections);
-// });
+selectionButtons.forEach((button) => {
+    button.addEventListener('click', showSelections);
+});
 
 sizeButtons.forEach((button) => {
     button.addEventListener('click', filterBySize);
