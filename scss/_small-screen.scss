@@ -210,6 +210,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding-bottom: 10px;
       .selection-box{
         .button-select-box{
           top: 45px;
@@ -231,6 +232,13 @@
         }
       }
     }
+
+    #table-search-message-box {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
     .table{
       width: 100%;
       font-size: 12px;

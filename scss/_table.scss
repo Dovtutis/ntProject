@@ -7,6 +7,7 @@
   box-shadow: 0 0 18px 0 rgba(0,0,0,0.4);
   z-index: 1;
   margin: 0 1rem;
+  padding-bottom: 10px;
 
   .buttons-container{
     display: flex;
@@ -29,8 +30,8 @@
         background-color: #ffffff;
         box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
         flex-direction: column;
-        text-align: center;
         font-size: 16px;
+        text-align: center;
         color: $text-black-color;
         z-index: 1;
 
@@ -38,6 +39,10 @@
           border-top: 1px solid $table-buttons-color;
           transition: .3s;
           cursor: pointer;
+          
+          span {
+            pointer-events: none;
+          }
         }
 
         div:hover {
