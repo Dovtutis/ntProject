@@ -14,8 +14,10 @@
     .selection-box{
       position: relative;
 
-      .button-text {
-        pointer-events: none;
+      .table-button {
+        i {
+          pointer-events: none;
+        }
       }
 
       .table-arrow {

@@ -154,8 +154,8 @@ function showSelections (event) {
     event.path[1].children[1].classList.toggle("display-flex");
     event.path[1].children[0].classList.toggle("border-radius-closed");
     event.path[1].children[0].classList.toggle("border-radius-open");
-    event.path[1].children[0].children[0].children[0].children[0].classList.toggle("fa-chevron-down");
-    event.path[1].children[0].children[0].children[0].children[0].classList.toggle("fa-chevron-up");
+    event.path[0].children[0].classList.toggle("fa-chevron-down");
+    event.path[0].children[0].classList.toggle("fa-chevron-up");
 }
 
 function generateFlatData () {
@@ -216,6 +216,7 @@ function generateTable(flats) {
 }
 
 function filterBySize(event) {
+    console.log(event);
     const filterType = event.path[0].children[0].innerText;
     const size = event.path[0].children[1].innerHTML;
     let filteredArray = [];
@@ -273,6 +274,6 @@ function closeSelectionBox(selectBox, buttonType) {
     selectBox.classList.toggle("display-flex");
     buttonType.classList.toggle("border-radius-closed");
     buttonType.classList.toggle("border-radius-open");
-    buttonType.children[0].children[0].children[0].classList.toggle("fa-chevron-down");
-    buttonType.children[0].children[0].children[0].classList.toggle("fa-chevron-up");
+    buttonType.children[0].classList.toggle("fa-chevron-down");
+    buttonType.children[0].classList.toggle("fa-chevron-up");
 }
