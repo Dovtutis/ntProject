@@ -2,6 +2,7 @@
 @import "utilities";
 @import "navbar";
 @import "galery";
+@import "table";
 @import "buttons";
 
 * {
@@ -22,6 +23,14 @@ body {
 .body-container {
   width: 100%;
   height: 1000px;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-none {
+  display: none;
 }
 
 @import "large-screen";

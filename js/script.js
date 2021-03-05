@@ -36,15 +36,14 @@ const scrollRightButton = document.getElementById('scroll-right-button');
 const galleryContainer = document.querySelector('.sliding-container');
 const requestUrl = 'https://api.unsplash.com/search/collections?page=1&per_page=6&query=home interior&client_id=IW3u5fbyKrQ1PDWZn5ZLo56AoiSLuOBxR6Fjb76YkCI';
 const imagesArray = [];
-let coordinate = 0;
 
-//EVENT LISTENERS
+let coordinate = 0;
 
 scrollLeftButton.addEventListener('click', scrollLeft);
 scrollRightButton.addEventListener('click', scrollRight);
 
-
 getImages();
+
 
 async function getImages () {
     fetch(requestUrl)
@@ -69,6 +68,7 @@ function createGalleryCards (imagesArray){
         let textContainer = document.createElement("div");
         textContainer.classList.add("text-container");
         let headline = document.createElement("h2");
+        headline.innerText = "Lorem ipsum dolor sit amet";
         headline.classList.add("py-1");
         let paragraph = document.createElement("p");
         paragraph.innerText = "Lorem ipsum dolor sit amet in nam, consectetur adipisicing elit. Fugit hic, impedit in nam odio quia?"
@@ -84,19 +84,6 @@ function createGalleryCards (imagesArray){
         galleryContainer.appendChild(card);
     })
 }
-
-// <div className="card">
-//     <img src="https://i.pinimg.com/originals/5b/65/31/5b65311e67cdc2ab9b5b1ba8516878cb.jpg"
-//          alt="" className="card-image">
-//         <div className="text-container">
-//             <h2 className="py-1">Lorem ipsum dolor sit amet</h2>
-//             <p>
-//                 Lorem ipsum dolor sit amet in nam, consectetur adipisicing elit. Fugit hic, impedit
-//                 in nam odio quia?
-//             </p>
-//             <i className="fas fa-arrow-right pb-2"></i>
-//         </div>
-// </div>
 
 function scrollLeft (){
     let cardWidth = document.querySelector('.card').offsetWidth;
@@ -115,4 +102,177 @@ function scrollRight (){
         galleryContainer.style.transform = `translateX(${coordinate+(cardWidth * 1.3)}px)`;
         coordinate += cardWidth * 1.3;
     }
+}
+
+//TABLE
+const sizeButton = document.getElementById('size-selection-button');
+const roomButton = document.getElementById('room-selection-button');
+const windowsdirectionButton = document.getElementById('window-direction-selection-button')
+const buildStatusButton = document.getElementById('build-status-selection-button');
+
+const selectionButtons = document.querySelectorAll('.table-button');
+const sizeButtons = document.querySelectorAll('.size-button');
+const roomsQuantityButtons = document.querySelectorAll('.rooms-quantity-button');
+const windowsDirrectionButtons = document.querySelectorAll('.windows-dirrection-button');
+const buildStatusButtons = document.querySelectorAll('.build-status-button');
+
+const sizeSelectBox = document.getElementById('size-select-box');
+const roomsQuantitySelectionBox = document.getElementById('rooms-quantity-select-box');
+const windowsDirectionSelectBox = document.getElementById('windows-direction-select-box');
+const buildStatusSelectBox = document.getElementById('build-status-select-box');
+const flatsTable = document.getElementById('flats-table');
+const tableSearchMessageBox = document.getElementById('table-search-message-box');
+
+const tableEl = document.getElementById('table-body');
+const flatsArray = [];
+
+selectionButtons.forEach((button) => {
+    button.addEventListener('click', showSelections);
+});
+
+sizeButtons.forEach((button) => {
+    button.addEventListener('click', filterBySize);
+})
+
+roomsQuantityButtons.forEach((button) => {
+    button.addEventListener('click', filterByRooms);
+})
+
+windowsDirrectionButtons.forEach((button) => {
+    button.addEventListener('click', filterByWindows);
+})
+
+buildStatusButtons.forEach((button) => {
+    button.addEventListener('click', filterByBuildingStatus);
+})
+
+generateFlatData();
+generateTable(flatsArray);
+
+function showSelections (event) {
+    event.path[1].children[1].classList.toggle("display-none");
+    event.path[1].children[1].classList.toggle("display-flex");
+    event.path[1].children[0].classList.toggle("border-radius-closed");
+    event.path[1].children[0].classList.toggle("border-radius-open");
+    event.path[1].children[0].children[0].children[0].children[0].classList.toggle("fa-chevron-down");
+    event.path[1].children[0].children[0].children[0].children[0].classList.toggle("fa-chevron-up");
+}
+
+function generateFlatData () {
+    const discountArray = ['', '5%', '10%'];
+    const windowsArray = ['Pietūs', 'Rytai', 'Šiaurė', 'Vakarai'];
+    const buildStatusArray = ['Pastatyta', 'Statoma'];
+
+    function randomFlat(discount, number, size, room, windows, finishStatus) {
+        this.discount = discount;
+        this.number = number;
+        this.size = size;
+        this.room = room;
+        this.windows = windows;
+        this.buildStatus = buildStatus;
+    }
+
+    for (let x = 0; x < 12; x++) {
+        discount = discountArray[Math.floor(Math.random() * 3)],
+        number = Math.ceil(Math.random() * 2),
+        size = Math.floor(Math.random() * (80 - 35 + 1) ) + 35,
+        room = Math.ceil(Math.random() * 4),
+        windows = windowsArray[Math.floor(Math.random() * 4)],
+        buildStatus = buildStatusArray[Math.floor(Math.random() * 2)]
+
+        const flat = new randomFlat(discount, number, size, room, windows, buildStatus);
+        flatsArray.push(flat)
+    }
+}
+
+function generateTable(flats) {
+    if (flats.length > 0) {
+        tableSearchMessageBox.innerHTML = "";
+        flatsTable.style.display = "block";
+        tableEl.innerHTML = '';
+        flats.forEach(flat => {
+            let backgroundColorClass = '';
+            if (flat.discount !== "") {
+                backgroundColorClass = "bg-light-blue";
+            }
+        
+            tableEl.innerHTML += 
+            `
+            <tr class="table-row ${backgroundColorClass}">
+                <td class="discount-table-data">-${flat.discount}</td>
+                <td>${flat.number}</td>
+                <td>${flat.size}.00</td>
+                <td>${flat.room}</td>
+                <td>${flat.windows}</td>
+                <td>${flat.buildStatus}</td>
+            </tr>
+            `
+        });
+    } else {
+        flatsTable.style.display = "none";
+        tableSearchMessageBox.innerHTML = "Atsiprašome, tačiau šiuo metu tokių pasiūlymų neturime."
+    }
+
+}
+
+function filterBySize(event) {
+    const filterType = event.path[0].children[0].innerText;
+    const size = event.path[0].children[1].innerHTML;
+    let filteredArray = [];
+    if (filterType === "<"){
+        filteredArray = flatsArray.filter(flat => flat.size < size);
+    } else {
+        filteredArray = flatsArray.filter(flat => flat.size > size);
+    }
+    findSelectionBox(event);
+    generateTable(filteredArray);
+}
+
+function filterByRooms(event) {
+    const roomQuantity = event.path[0].innerHTML;
+    let filteredArray = [];
+    filteredArray = flatsArray.filter(flat => flat.room == roomQuantity);
+    findSelectionBox(event);
+    generateTable(filteredArray);
+}
+
+function filterByWindows(event) {
+    const windowsDirrection = event.path[0].innerHTML;
+    let filteredArray = [];
+    filteredArray = flatsArray.filter(flat => flat.windows === windowsDirrection);
+    findSelectionBox(event);
+    generateTable(filteredArray);
+}
+
+function filterByBuildingStatus(event) {
+    const buildStatus = event.path[0].innerHTML;
+    console.log(buildStatus);
+    let filteredArray = [];
+    filteredArray = flatsArray.filter(flat => flat.buildStatus === buildStatus);
+    findSelectionBox(event);
+    generateTable(filteredArray);
+}
+
+function findSelectionBox(event) {
+    if (sizeSelectBox.classList.contains("display-flex")) {
+        closeSelectionBox(sizeSelectBox, sizeButton);
+    }
+    if (roomsQuantitySelectionBox.classList.contains("display-flex")) {
+        closeSelectionBox(roomsQuantitySelectionBox, roomButton);
+    }
+    if (windowsDirectionSelectBox.classList.contains("display-flex")) {
+        closeSelectionBox(windowsDirectionSelectBox, windowsdirectionButton);
+    }
+    if (buildStatusSelectBox.classList.contains("display-flex")) {
+        closeSelectionBox(buildStatusSelectBox, buildStatusButton);
+    }
+}
+
+function closeSelectionBox(selectBox, buttonType) {
+    selectBox.classList.toggle("display-none");
+    selectBox.classList.toggle("display-flex");
+    buttonType.classList.toggle("border-radius-closed");
+    buttonType.classList.toggle("border-radius-open");
+    buttonType.children[0].children[0].children[0].classList.toggle("fa-chevron-down");
+    buttonType.children[0].children[0].children[0].classList.toggle("fa-chevron-up");
 }

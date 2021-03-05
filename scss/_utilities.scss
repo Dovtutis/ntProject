@@ -1,9 +1,23 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
   max-width: 1367px;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.z-index-3 {
+  z-index: 3;
+}
+
+.z-index-4 {
+  z-index: 4;
 }
 
 //Margin & Padding classes
@@ -33,6 +47,14 @@ $spaceAmounts: (1, 2, 3, 4, 5);
     margin-bottom: #{$space}rem;
   }
 
+  .ml-#{$space}{
+    margin-left: #{$space}rem;
+  }
+
+  .mr-#{$space}{
+    margin-right: #{$space}rem;
+  }
+
   .p-#{$space}{
     padding: #{$space}rem;
   }
@@ -53,6 +75,14 @@ $spaceAmounts: (1, 2, 3, 4, 5);
 
   .pb-#{$space}{
     padding-bottom: #{$space}rem;
+  }
+
+  .pl-#{$space}{
+    padding-left: #{$space}rem;
+  }
+
+  .pr-#{$space}{
+    padding-right: #{$space}rem;
   }
 }
 
