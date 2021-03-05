@@ -127,7 +127,7 @@ const tableEl = document.getElementById('table-body');
 const flatsArray = [];
 
 selectionButtons.forEach((button) => {
-    button.addEventListener('click', showSelections);
+    button.addEventListener('touchstart', showSelections);
 });
 
 sizeButtons.forEach((button) => {
