@@ -277,3 +277,38 @@ function closeSelectionBox(selectBox, buttonType) {
     buttonType.children[0].classList.toggle("fa-chevron-down");
     buttonType.children[0].classList.toggle("fa-chevron-up");
 }
+
+
+// NEWS
+
+const newsContainerEl = document.getElementById('news-cards-container');
+const requestUrlNews = 'https://api.unsplash.com/search/collections?page=1&per_page=6&query=lifestyle&client_id=IW3u5fbyKrQ1PDWZn5ZLo56AoiSLuOBxR6Fjb76YkCI';
+const newsImagesArray = [];
+
+getNewsImages();
+
+async function getNewsImages () {
+    fetch(requestUrlNews)
+        .then((response) => response.json())
+        .then((data) => {
+            data.results.forEach((image) => {
+                newsImagesArray.push(image.preview_photos[0].urls.regular)
+            });
+            createNewsCards(newsImagesArray);
+        }).catch(error => console.error())
+}
+
+function createNewsCards (imagesArray){
+    imagesArray.forEach((image) => {
+        let card = document.createElement("div");
+        card.classList.add("news-card");
+        let img = document.createElement("img");
+        img.setAttribute('src', image);
+        img.setAttribute('alt', 'lifestyle');
+        let textContainer = document.createElement("p");
+        textContainer.innerText = "Lorem ipsum dolor sit amet";
+        card.appendChild(img);
+        card.appendChild(textContainer);
+        newsContainerEl.appendChild(card);
+    })
+}
