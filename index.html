@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/42762d49f1.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
@@ -69,7 +71,8 @@
                                 Plotas <i class="fas fa-chevron-down table-arrow"></i>
                             </button>
                             <div class="button-select-box display-none" id="size-select-box">
-                                <div class="size-button"><span><</span> <span>50</span> kvm.</div>
+                                <div class="size-button"><span>
+                                        << /span> <span>50</span> kvm.</div>
                                 <div class="size-button"><span>></span> <span>50</span> kvm.</div>
                             </div>
                         </div>
@@ -85,24 +88,26 @@
                             </div>
                         </div>
                         <div class="selection-box">
-                                <button id="window-direction-selection-button" type="button" class="table-button border-radius-closed">
-                                    Langų orientacija <i class="fas fa-chevron-down table-arrow"></i>
-                                </button>
-                                <div class="button-select-box display-none" id="windows-direction-select-box">
-                                    <div class="windows-dirrection-button">Šiaurė</div>
-                                    <div class="windows-dirrection-button">Pietūs</div>
-                                    <div class="windows-dirrection-button">Rytai</div>
-                                    <div class="windows-dirrection-button">Vakarai</div>
-                                </div>
+                            <button id="window-direction-selection-button" type="button"
+                                class="table-button border-radius-closed">
+                                Langų orientacija <i class="fas fa-chevron-down table-arrow"></i>
+                            </button>
+                            <div class="button-select-box display-none" id="windows-direction-select-box">
+                                <div class="windows-dirrection-button">Šiaurė</div>
+                                <div class="windows-dirrection-button">Pietūs</div>
+                                <div class="windows-dirrection-button">Rytai</div>
+                                <div class="windows-dirrection-button">Vakarai</div>
+                            </div>
                         </div>
                         <div class="selection-box">
-                                <button id="build-status-selection-button" type="button" class="table-button border-radius-closed">
-                                    Baigtumas <i class="fas fa-chevron-down table-arrow"></i>
-                                </button>
-                                <div class="button-select-box display-none" id="build-status-select-box">
-                                    <div class="build-status-button">Pastatyta</div>
-                                    <div class="build-status-button">Statoma</div>
-                                </div>
+                            <button id="build-status-selection-button" type="button"
+                                class="table-button border-radius-closed">
+                                Baigtumas <i class="fas fa-chevron-down table-arrow"></i>
+                            </button>
+                            <div class="button-select-box display-none" id="build-status-select-box">
+                                <div class="build-status-button">Pastatyta</div>
+                                <div class="build-status-button">Statoma</div>
+                            </div>
                         </div>
                     </div>
                     <div id="table-search-message-box"></div>
@@ -111,7 +116,7 @@
                             <col span="3" style="width: 18%;">
                             <col span="2" style="width: 14%;">
                             <col span="1" style="width: 21%;">
-                          </colgroup>
+                        </colgroup>
                         <thead>
                             <tr class="table-row">
                                 <th>Nuolaida</th>
@@ -131,10 +136,17 @@
         </div>
         <div class="container">
             <article>
-                <h2 id="newsContainerHeading">Naujienos</h2>
+                <h2 id="news-container-heading">Naujienos</h2>
             </article>
-            <div id="newsContainer">
+            <div id="news-container">
+                <div id="news-cards-container">
+
+                </div>
+                <button id="news-container-button">
+                    Daugiau naujienų <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
+
         </div>
     </main>
 </body>

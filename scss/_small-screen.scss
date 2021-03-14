@@ -253,5 +253,31 @@
     }
   }
 
+  // NEWS
+  #news-container-heading {
+    margin: 0 44px 20px 44px;
+    font-size: 30px;
+  }
+
+  #news-container{
+
+    #news-cards-container {
+      justify-content: center;
+      padding: 22px 22px;
+
+      .news-card {
+
+        p {
+          width: 220px;
+          font-size: 20px;
+        }
+      }
+    }
+    #news-container-button {
+      width: 200px;
+      height: 50px;
+      font-size: 16px;
+    }
+  }
 }
 

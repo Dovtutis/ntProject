@@ -281,7 +281,7 @@ function closeSelectionBox(selectBox, buttonType) {
 
 // NEWS
 
-const newsContainerEl = document.getElementById('newsContainer');
+const newsContainerEl = document.getElementById('news-cards-container');
 const requestUrlNews = 'https://api.unsplash.com/search/collections?page=1&per_page=6&query=lifestyle&client_id=IW3u5fbyKrQ1PDWZn5ZLo56AoiSLuOBxR6Fjb76YkCI';
 const newsImagesArray = [];
 
@@ -301,7 +301,7 @@ async function getNewsImages () {
 function createNewsCards (imagesArray){
     imagesArray.forEach((image) => {
         let card = document.createElement("div");
-        card.classList.add("newsCard");
+        card.classList.add("news-card");
         let img = document.createElement("img");
         img.setAttribute('src', image);
         img.setAttribute('alt', 'lifestyle');

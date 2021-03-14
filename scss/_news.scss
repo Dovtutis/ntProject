@@ -1,25 +1,29 @@
-#newsContainerHeading {
-    margin: 40px 88px 20px 88px;
+#news-container-heading {
     color: $text-black-color;
     font-weight: bold;
-    font-size: 50px;
 }
 
-#newsContainer {
+#news-container {
+    box-shadow: 0px 0px 7px 0px rgba(#000, 0.3);
+    font-family: 'Quicksand';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    #news-cards-container {
     width: 100%;
     background-color: #fff;
-    padding: 44px 88px;
-    box-shadow: 0px 0px 7px 0px rgba(#000, 0.3);
     display: flex;
-    justify-content: space-between;
     align-content: space-between;
     flex-wrap: wrap;
 
-    .newsCard {
+    .news-card {
         width: 382px;
         height: 382px;
         margin-bottom: 14px;
         position: relative;
+        cursor: pointer;
+        transition: .3s;
 
         img {
             width: 100%;
@@ -31,12 +35,30 @@
             position: absolute;
             bottom: 0;
             left: 10px;
-            width: 272px;
             height: 76px;
-            font-size: 26px;
             color: #fff;
             font-weight: bold;
         }
     }
+
+        .news-card:hover {
+            transform: scale(.98);
+        }
+    }
+
+    #news-container-button {
+        margin: 0 auto 44px auto;
+        border-radius: 30px;
+        color: #fff;
+        background-color: $text-black-color;
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    #news-container-button:hover {
+        transform: scale(.98);
+    }
 }
+
+
 

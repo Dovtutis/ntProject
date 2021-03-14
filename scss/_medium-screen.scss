@@ -115,6 +115,34 @@
       }
     }
   }
+
+  // NEWS
+  #news-container-heading {
+    margin: 0 88px 20px 88px;
+    font-size: 40px;
 }
+
+  #news-container{
+
+    #news-cards-container {
+      justify-content: space-around;
+      padding: 33px 66px;
+
+      .news-card {
+        p {
+          width: 222px;
+          font-size: 20px;
+        }
+      }
+    }
+    #news-container-button {
+      width: 240px;
+      height: 50px;
+      font-size: 18px;
+    }
+  }
+}
+
+
 
 
