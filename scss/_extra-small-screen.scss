@@ -64,5 +64,50 @@
         font-size: 12px;
       }
     }
+
+    //CONTACTS
+
+  #contact-container {
+    flex-direction: column;
+    height: 100%;
+
+    #employees-container {
+      height: 100%;
+    
+    #employees-inner-container {
+      padding-bottom: 0;
+      margin: 20px 0;
+
+      .employee {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 80px;
+          min-width: 80px;
+          height: 80px;
+        }
+
+      .info-container{
+        margin: 0 16px;
+
+        .employee-name {font-size: 16px;}
+
+        .employee-email .employee-phone {font-size: 10px;}
+      }
+      }
+    }
+    #triangle-bottom-right {border-bottom: 500px solid #fff;}
+  }
+
+    #form-container {
+    height: 772px;
+    }
+
+  }
+
 }
+
+
 

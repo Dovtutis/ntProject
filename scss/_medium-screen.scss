@@ -142,8 +142,43 @@
       font-size: 18px;
     }
   }
+
+  
+// CONTACTS
+
+#contact-container {
+  height: 772px;
+  margin-top: 50px;
+
+  #employees-container {
+
+      #employees-inner-container {
+        padding-bottom: 50px;
+
+        .employee {
+          display: flex;
+          margin: 20px 10px;
+
+            img {
+                width: 120px;
+                min-width: 120px;
+                height: 120px;
+            }
+
+            .info-container{
+                margin: 0 32px;
+
+                .employee-name {font-size: 24px;}
+
+                .employee-email .employee-phone {font-size: 16px;}
+            }
+
+        }
+    }
+    #triangle-bottom-right {border-bottom: 772px solid #fff;}
+  }
 }
 
 
-
+}
 
