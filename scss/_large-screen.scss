@@ -164,27 +164,54 @@
 
   }
 
-  #form-container {
+    #form-container {
+      padding: 50px 30px 30px 30px;
 
-    #form-title {
-      font-size: 50px;
-    }
-    .form-element {
-      line-height: 40px;
-      font-size: 20px;
-      margin: 20px 0;
-    }
+      #form-title {
+        width: 70%;
+        font-size: 50px;
+      }
+      .form-element {
+        line-height: 40px;
+        font-size: 20px;
+        margin: 20px 0;
+      }
 
-    #form-checkbox {
+      #checkbox-container {
+        padding-left: 50px;
+        font-size: 18px;
+        line-height: 36px;
+        margin: 20px 0;
 
-    }
+        #custom-checkbox-container {
+          top: 10px;
+          height: 28px;
+          width: 28px;
+        }
 
-    #form-checkbox-label {
-      line-height: 36px;
-      font-size: 18px;
+        #custom-checkbox {
+          top: 3px;
+          left: 3px;
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      #form-submit-button {
+        margin: 30px 0;
+        width: 197px;
+        height: 60px;
+        border-radius: 30px;
+        font-size: 20px;
+
+        i {
+          font-size: 24px;
+          padding-left: 10px;
+      }
+      }
+
     }
   }
-}
 
 
 }

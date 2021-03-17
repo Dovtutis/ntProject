@@ -312,3 +312,13 @@ function createNewsCards (imagesArray){
         newsContainerEl.appendChild(card);
     })
 }
+
+
+// CONTACTS
+
+const checkBoxEl = document.getElementById("custom-checkbox");
+checkBoxEl.addEventListener('click', bezde);
+
+function bezde(params) {
+    console.log("Sveike");
+}
