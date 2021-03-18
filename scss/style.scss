@@ -5,6 +5,7 @@
 @import "table";
 @import "buttons";
 @import "news";
+@import "contact";
 
 * {
   -webkit-box-sizing: border-box;
@@ -13,9 +14,9 @@
   padding: 0;
 }
 
-body {
-  font-family: $font-stack;
-}
+// body {
+//   font-family: $font-stack;
+// }
 
 .main {
   padding-top: $navbar-height;

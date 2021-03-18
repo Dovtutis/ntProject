@@ -279,5 +279,99 @@
       font-size: 16px;
     }
   }
+
+//CONTACTS
+
+  #contact-container {
+    flex-direction: column;
+    height: 100%;
+
+    #employees-container {
+    height: 500px;
+    
+    #employees-inner-container {
+      padding-bottom: 50px;
+
+      .employee {
+        display: flex;
+        margin: 10px 5px;
+
+          img {
+              width: 100px;
+              min-width: 100px;
+              height: 100px;
+          }
+
+          .info-container{
+            margin: 0 16px;
+
+            .employee-name {font-size: 20px;}
+
+            .employee-email .employee-phone {font-size: 12px;}
+          }
+
+      }
+    }
+    #triangle-bottom-right {border-bottom: 500px solid #fff;}
+  }
+
+    #form-container {
+      height: 772px;
+      padding: 0 30px;
+
+      #form-title {
+        width: 95%;
+        font-size: 40px;
+        @media only screen and (min-width: 320px) and (max-width: 440px){font-size: 30px;}
+      }
+
+      .form-input-element {
+        line-height: 32px;
+        font-size: 18px;
+        margin: 18px 0 0 0;
+      }
+      
+      #checkbox-container {
+        padding-left: 40px;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 10px 0;
+
+        #custom-checkbox-container {
+          top: 5px;
+          height: 26px;
+          width: 26px;
+        }
+
+        #custom-checkbox {
+          top: 3px;
+          left: 3px;
+          height: 18px;
+          width: 18px;
+        }
+      }
+      
+      #form-submit-button {
+        margin: 15px 0;
+        width: 177px;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 25px;
+
+        i {
+          font-size: 20px;
+          padding-left: 10px;
+        }
+      }
+
+      .form-error {
+        font-size: 12px;
+      }
+
+    }
+  }
 }
+
+
+
 

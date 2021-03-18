@@ -128,7 +128,99 @@
     }
 
   }
+
+// CONTACTS
+
+#contact-container {
+  height: 772px;
+  margin-top: 50px;
+
+  #employees-container {
+
+      #employees-inner-container {
+        padding-bottom: 50px;
+
+        .employee {
+          display: flex;
+          margin: 20px 10px;
+
+            img {
+                width: 130px;
+                height: 130px;
+            }
+
+            .info-container{ 
+              margin: 0 32px;
+
+              .employee-name {font-size: 26px;}
+
+              .employee-email .employee-phone {font-size: 18px;}
+            }
+
+        }
+    }
+
+    #triangle-bottom-right {border-bottom: 772px solid #fff;}
+
+  }
+
+    #form-container {
+      padding: 60px 30px 30px 30px;
+
+      #form-title {
+        width: 70%;
+        font-size: 50px;
+        margin-bottom: 15px;
+      }
+      .form-input-element {
+        line-height: 40px;
+        font-size: 20px;
+        margin: 12px 0 0 0;
+      }
+
+      #checkbox-container {
+        padding-left: 50px;
+        font-size: 18px;
+        line-height: 36px;
+        margin: 12px 0;
+
+        #custom-checkbox-container {
+          top: 10px;
+          height: 29px;
+          width: 29px;
+        }
+
+        #custom-checkbox {
+          top: 4px;
+          left: 4px;
+          height: 20px;
+          width: 20px;
+        }
+      }
+
+      #form-submit-button {
+        margin: 15px 0;
+        width: 197px;
+        height: 60px;
+        border-radius: 30px;
+        font-size: 20px;
+
+        i {
+          font-size: 24px;
+          padding-left: 10px;
+        }
+      }
+
+      .form-error {
+        font-size: 14px;
+      }
+
+    }
+  }
+
+
 }
+
 
 
 

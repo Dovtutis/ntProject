@@ -142,8 +142,96 @@
       font-size: 18px;
     }
   }
+
+  
+// CONTACTS
+
+  #contact-container {
+    height: 772px;
+    margin-top: 50px;
+
+    #employees-container {
+
+        #employees-inner-container {
+          padding-bottom: 50px;
+
+          .employee {
+            display: flex;
+            margin: 20px 10px;
+
+              img {
+                  width: 120px;
+                  min-width: 120px;
+                  height: 120px;
+              }
+
+              .info-container{
+                  margin: 0 32px;
+
+                  .employee-name {font-size: 24px;}
+
+                  .employee-email .employee-phone {font-size: 16px;}
+              }
+
+          }
+      }
+      #triangle-bottom-right {border-bottom: 772px solid #fff;}
+    }
+
+    #form-container {
+      padding: 30px 10px 10px 10px;
+
+      #form-title {
+        width: 95%;
+        font-size: 40px;
+        @media only screen and (min-width: 640px) and (max-width: 900px){font-size: 30px;}
+      }
+      .form-input-element {
+        line-height: 32px;
+        @media only screen and (min-width: 640px) and (max-width: 900px){line-height: 24px;}
+        font-size: 18px;
+        margin: 18px 0 0 0;
+      }
+      
+      #checkbox-container {
+        padding-left: 40px;
+        font-size: 16px;
+        @media only screen and (min-width: 640px) and (max-width: 900px){font-size: 12px;}
+        line-height: 24px;
+        @media only screen and (min-width: 640px) and (max-width: 900px){line-height: 18px;}
+        margin: 10px 0;
+
+        #custom-checkbox-container {
+          top: 5px;
+          height: 26px;
+          width: 26px;
+        }
+
+        #custom-checkbox {
+          top: 3px;
+          left: 3px;
+          height: 18px;
+          width: 18px;
+        }
+      }
+      
+      #form-submit-button {
+        margin: 15px 0;
+        width: 177px;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 25px;
+
+        i {
+          font-size: 20px;
+          padding-left: 10px;
+        }
+      }
+
+      .form-error {
+        font-size: 12px;
+      }
+    }
+  }
 }
-
-
-
 
