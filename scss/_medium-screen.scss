@@ -186,11 +186,11 @@
         font-size: 40px;
         @media only screen and (min-width: 640px) and (max-width: 900px){font-size: 30px;}
       }
-      .form-element {
+      .form-input-element {
         line-height: 32px;
         @media only screen and (min-width: 640px) and (max-width: 900px){line-height: 24px;}
         font-size: 18px;
-        margin: 20px 0;
+        margin: 18px 0 0 0;
       }
       
       #checkbox-container {
@@ -226,6 +226,10 @@
           font-size: 20px;
           padding-left: 10px;
         }
+      }
+
+      .form-error {
+        font-size: 12px;
       }
     }
   }

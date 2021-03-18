@@ -325,10 +325,10 @@
         @media only screen and (min-width: 320px) and (max-width: 440px){font-size: 30px;}
       }
 
-      .form-element {
+      .form-input-element {
         line-height: 32px;
         font-size: 18px;
-        margin: 20px 0;
+        margin: 18px 0 0 0;
       }
       
       #checkbox-container {
@@ -363,11 +363,13 @@
           padding-left: 10px;
         }
       }
+
+      .form-error {
+        font-size: 12px;
+      }
+
     }
-
   }
-  
-
 }
 
 

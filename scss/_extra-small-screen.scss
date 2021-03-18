@@ -109,10 +109,10 @@
         font-size: 20px;
       }
 
-      .form-element {
+      .form-input-element {
         line-height: 28px;
         font-size: 14px;
-        margin: 10px 0;
+        margin: 10px 0 0 0;
       }
       
       #checkbox-container {
@@ -148,10 +148,11 @@
         }
       }
 
+      .form-error {
+        font-size: 10px;
+      }
     }
-
   }
-
 }
 
 

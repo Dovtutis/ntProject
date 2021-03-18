@@ -316,9 +316,90 @@ function createNewsCards (imagesArray){
 
 // CONTACTS
 
-const checkBoxEl = document.getElementById("custom-checkbox");
-checkBoxEl.addEventListener('click', bezde);
+const formNameEl = document.getElementById('form-name');
+const formEmailEl = document.getElementById('form-email');
+const formPhoneEl = document.getElementById('form-phone');
+const formMessageEl = document.getElementById('form-message');
+const formCheckBoxEl = document.getElementById('form-checkbox');
+const formSubmitButton = document.getElementById('form-submit-button');
+const formNameErrorEl = document.getElementById('name-error');
+const formEmailErrorEl = document.getElementById('email-error');
+const formPhoneErrorEl = document.getElementById('phone-error');
+const formMessageErrorEl = document.getElementById('message-error');
+const formCheckBoxErrorEl = document.getElementById('checkbox-error');
 
-function bezde(params) {
-    console.log("Sveike");
+const inputElArray = [formNameEl, formEmailEl, formPhoneEl, formMessageEl];
+const inputElErrorArray = [formNameErrorEl, formEmailErrorEl, formPhoneErrorEl, formMessageErrorEl, formCheckBoxErrorEl];
+
+formSubmitButton.addEventListener('click', checkTheForm);
+inputElArray.map(element => {
+    element.addEventListener('input', enableSubmitButton);
+})
+formCheckBoxEl.addEventListener('change', enableSubmitButton);
+
+function enableSubmitButton() {
+    formSubmitButton.disabled = false;
+    formSubmitButton.style.backgroundColor = "#30333C";
+    formSubmitButton.style.cursor = "pointer";
 }
+
+function checkTheForm(e) {
+    e.preventDefault();
+    // Checking if field values is not empty
+    inputElArray.map((input, index )=> {
+        checkIfFieldIsEmpty(input, index);
+    })
+    // Checking checkbox value
+    checkCheckboxValue(formCheckBoxEl);
+
+    // Checking email
+    formEmailEl.value.length > 0 ? checkEmail(formEmailEl.value) : null;
+
+    // Check phone number 
+    formPhoneEl.value.length > 0 ? checkPhoneNumber(formPhoneEl.value) : null;
+
+    checkIfSubmitIsPossible();
+}
+ 
+function checkIfFieldIsEmpty(inputField, index) {
+    if (inputField.value === "") {
+        inputElErrorArray[index].innerText = "Privalomas laukas"
+    } else {
+        inputElErrorArray[index].innerText = "";
+    }
+}
+
+function checkCheckboxValue(checkbox) {
+    if (checkbox.checked === false) {
+        formCheckBoxErrorEl.innerText = "Privalomas laukas"
+    }else {
+        formCheckBoxErrorEl.innerText = ""
+    }
+}
+
+function checkEmail(emailField) {
+    if (!/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(emailField)){
+        formEmailErrorEl.innerText = "Įvestas neteisingas el. paštas";
+    }
+}
+
+function checkPhoneNumber(phoneField) {
+    if (!/^[-+]?[0-9]+$/.test(phoneField)){
+        formPhoneErrorEl.innerText = "Įvestas neteisingas telefono numeris, galimi tik skaičiai";
+    }
+}
+
+function checkIfSubmitIsPossible() {   
+    inputElErrorArray.map(input => {
+        if (input.value !== "") {
+            formSubmitButton.disabled = true;
+            formSubmitButton.style.backgroundColor = "#D9DBE2";
+            formSubmitButton.style.cursor = "auto";
+        } else {
+            formSubmitButton.disabled = false;
+            formSubmitButton.style.backgroundColor = $text-black-color;
+        }
+    })
+}
+
+

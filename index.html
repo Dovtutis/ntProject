@@ -11,9 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/42762d49f1.js" crossorigin="anonymous"></script>
     <script src="js/script.js" defer></script>
 </head>
@@ -71,8 +70,7 @@
                                 Plotas <i class="fas fa-chevron-down table-arrow"></i>
                             </button>
                             <div class="button-select-box display-none" id="size-select-box">
-                                <div class="size-button"><span>
-                                        << /span> <span>50</span> kvm.</div>
+                                <div class="size-button"><span><</span> <span>50</span> kvm.</div>
                                 <div class="size-button"><span>></span> <span>50</span> kvm.</div>
                             </div>
                         </div>
@@ -183,22 +181,23 @@
                     </div>
                     <div id="form-container">
                         <span id="form-title">Sužinok apie projektą daugiau</span>
-                        <form action="">
-                            <input type="text" id="form-name" class="form-element" placeholder="Jūsų vardas">
-                            <span id="name-error"></span>
-                            <input type="text" id="form-email" class="form-element" placeholder="El. Paštas">
-                            <span id="email-error"></span>
-                            <input type="text" id="form-phone" class="form-element" placeholder="Telefono numeris">
-                            <span id="phone-error"></span>
-                            <input type="text" id="form-message" class="form-element" placeholder="Žinutė">
-                            <span id="message-error"></span><br>
+                        <form action="" id="contact-form" autocomplete="off">
+                            <input type="text" id="form-name" class="form-input-element" placeholder="Jūsų vardas"><br>
+                            <span id="name-error" class="form-error"></span>
+                            <input type="text" id="form-email" class="form-input-element" placeholder="El. Paštas"><br>
+                            <span id="email-error" class="form-error"></span>
+                            <input type="text" id="form-phone" class="form-input-element" placeholder="Telefono numeris"><br>
+                            <span id="phone-error" class="form-error"></span>
+                            <input type="text" id="form-message" class="form-input-element" placeholder="Žinutė"><br>
+                            <span id="message-error" class="form-error"></span><br>
                             <label id="checkbox-container">Lorem ipsum, dolor sit amet, consectetur adipiscing elit, sed
                                 do eiusmod tempor incididunt ut labore minim ntprojects@info.com
-                                <input type="checkbox">
+                                <input type="checkbox" id="form-checkbox">
                                 <span id="custom-checkbox-container">
                                     <span id="custom-checkbox"></span>
                                 </span>
                             </label>
+                            <span id="checkbox-error" class="form-error"></span><br>
                             <button id="form-submit-button">Siųsti <i class="fas fa-arrow-right"></i></button>
                         </form>
                     </div>
