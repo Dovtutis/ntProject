@@ -1,14 +1,16 @@
 @media only screen and (max-width: 320px){
 
   .gallery-container {
-    height: 500px;
+    height: 420px;
+    margin-bottom: 40px;
 
     .title {
       min-width: 250px;
       margin-left: 1rem;
 
       .main-title {
-        font-size: 0.7rem;
+        font-size: 14px;
+        margin-left: 10px;
       }
     }
 

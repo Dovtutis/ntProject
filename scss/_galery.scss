@@ -5,13 +5,13 @@
   min-width: 280px;
   padding: 0.5rem calc((100vw - 1367px) /2);
   background-color: $general-light-blue-color;
+  color: $text-black-color;
   position: relative;
   z-index: 0;
 
   .title {
-    width: 35%;
+    width: 40%;
     min-width: 350px;
-    margin-left: 3rem;
   }
 
   &-white{
@@ -28,7 +28,7 @@
 
   .main-title {
     position: relative;
-    font-family: 'Montserrat';
+    font-family: 'Quicksand';
     letter-spacing: 0.3rem;
     font-weight: 600;
     z-index: 1;
@@ -72,6 +72,7 @@
         border-radius: 10px 100px 15px 15px;
         flex: 0 0 auto;
         background-color: #fff;
+        font-family: 'Montserrat';
 
         .card-image{
           width: 100%;

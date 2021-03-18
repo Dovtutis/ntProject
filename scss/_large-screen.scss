@@ -6,10 +6,12 @@
 
   //GALLERY
   .gallery-container {
+    margin-bottom: 100px;
     .title {
-      padding: 3rem 0;
+      padding: 48px 0;
+      margin-left: 48px;
       .main-title {
-        font-size: 2.5rem;
+        font-size: 50px;
       }
     }
     .gallery-container-white{
@@ -27,16 +29,17 @@
         }
 
         .text-container{
-          padding: 0 2rem;
+          padding: 0 32px;
 
           h2 {
-            line-height: 1.8rem;
-            font-size: 1.7rem;
+            font-size: 26px;
+            font-weight: 600;
           }
 
           p {
             text-align: justify;
-            line-height: 1.6rem;
+            line-height: 24px;
+            font-size: 18px;
           }
         }
       }
