@@ -215,9 +215,8 @@ function generateTable(flats) {
 }
 
 function filterBySize(event) {
-    console.log(event);
-    const filterType = event.path[0].children[0].innerText;
-    const size = event.path[0].children[1].innerHTML;
+    const filterType = event.target.children[0].innerText;
+    const size = event.target.children[1].innerText;
     let filteredArray = [];
     if (filterType === "<"){
         filteredArray = flatsArray.filter(flat => flat.size < size);
