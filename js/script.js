@@ -124,8 +124,8 @@ const tableSearchMessageBox = document.getElementById('table-search-message-box'
 const tableEl = document.getElementById('table-body');
 const flatsArray = [];
 
-selectionButtons.forEach((button) => {
-    button.addEventListener('click', showSelections);
+selectionButtons.forEach((button, index) => {
+    button.addEventListener('click', (event)=> showSelections(event, index));
 });
 
 sizeButtons.forEach((button) => {
@@ -147,13 +147,14 @@ buildStatusButtons.forEach((button) => {
 generateFlatData();
 generateTable(flatsArray);
 
-function showSelections (event) {
-    event.path[1].children[1].classList.toggle("display-none");
-    event.path[1].children[1].classList.toggle("display-flex");
-    event.path[1].children[0].classList.toggle("border-radius-closed");
-    event.path[1].children[0].classList.toggle("border-radius-open");
-    event.path[0].children[0].classList.toggle("fa-chevron-down");
-    event.path[0].children[0].classList.toggle("fa-chevron-up");
+function showSelections (event, index) {
+
+    selectionButtons[index].children[0].classList.toggle("fa-chevron-down");
+    selectionButtons[index].children[0].classList.toggle("fa-chevron-up");
+    selectionButtons[index].classList.toggle("border-radius-closed");
+    selectionButtons[index].classList.toggle("border-radius-open");
+    selectionButtons[index].parentElement.children[1].classList.toggle("display-none");
+    selectionButtons[index].parentElement.children[1].classList.toggle("display-flex");
 }
 
 function generateFlatData () {
