@@ -92,8 +92,8 @@ function scrollLeft (){
     let maxCoordinateLeft = -6 * cardWidth;
 
     if (coordinate > maxCoordinateLeft){
-        galleryContainer.style.transform = `translateX(${coordinate-(cardWidth * 1.3)}px)`;
-        coordinate -= cardWidth * 1.3;
+        galleryContainer.style.transform = `translateX(${coordinate-(cardWidth * 1.5)}px)`;
+        coordinate -= cardWidth * 1.5;
     }
 }
 
@@ -101,8 +101,8 @@ function scrollRight (){
     let cardWidth = document.querySelector('.card').offsetWidth;
     let maxCoordinateRight = 2 * cardWidth;
     if (coordinate < maxCoordinateRight){
-        galleryContainer.style.transform = `translateX(${coordinate+(cardWidth * 1.3)}px)`;
-        coordinate += cardWidth * 1.3;
+        galleryContainer.style.transform = `translateX(${coordinate+(cardWidth * 1.5)}px)`;
+        coordinate += cardWidth * 1.5;
     }
 }
 
