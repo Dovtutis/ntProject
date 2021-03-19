@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 
     #news-cards-container {
     width: 100%;
@@ -47,7 +48,11 @@
         }
     }
 
-
+    #navbar-tag-contact {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+    }
 }
 
 
