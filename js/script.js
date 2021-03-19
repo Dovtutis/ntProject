@@ -228,7 +228,8 @@ function filterBySize(event) {
 }
 
 function filterByRooms(event) {
-    const roomQuantity = event.path[0].innerHTML;
+    console.log(event);
+    const roomQuantity = event.target.innerText;
     let filteredArray = [];
     filteredArray = flatsArray.filter(flat => flat.room == roomQuantity);
     findSelectionBox(event);
@@ -236,7 +237,7 @@ function filterByRooms(event) {
 }
 
 function filterByWindows(event) {
-    const windowsDirrection = event.path[0].innerHTML;
+    const windowsDirrection = event.target.innerText;
     let filteredArray = [];
     filteredArray = flatsArray.filter(flat => flat.windows === windowsDirrection);
     findSelectionBox(event);
@@ -244,7 +245,7 @@ function filterByWindows(event) {
 }
 
 function filterByBuildingStatus(event) {
-    const buildStatus = event.path[0].innerHTML;
+    const buildStatus = event.target.innerText;
     console.log(buildStatus);
     let filteredArray = [];
     filteredArray = flatsArray.filter(flat => flat.buildStatus === buildStatus);
