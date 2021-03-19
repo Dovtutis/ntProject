@@ -39,8 +39,8 @@ const imagesArray = [];
 
 let coordinate = 0;
 
-scrollLeftButton.addEventListener('click', scrollRight);
-scrollRightButton.addEventListener('click', scrollLeft);
+scrollLeftButton.addEventListener('click', scrollLeft);
+scrollRightButton.addEventListener('click', scrollRight);
 
 getImages();
 
