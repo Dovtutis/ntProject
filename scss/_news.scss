@@ -1,5 +1,6 @@
 #news-container-heading {
     color: $text-black-color;
+    font-family: 'Quicksand';
     font-weight: bold;
 }
 
@@ -46,18 +47,7 @@
         }
     }
 
-    #news-container-button {
-        margin: 0 auto 44px auto;
-        border-radius: 30px;
-        color: #fff;
-        background-color: $text-black-color;
-        cursor: pointer;
-        transition: .3s;
-    }
 
-    #news-container-button:hover {
-        transform: scale(.98);
-    }
 }
 
 

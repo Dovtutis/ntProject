@@ -55,6 +55,11 @@
 
   table {
     border-collapse: collapse;
+
+    th {
+      font-weight: 500;
+    }
+
     tbody {
       tr {
         border-top: 1px solid rgba(128, 128, 128, 0.1);
