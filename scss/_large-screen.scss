@@ -221,6 +221,25 @@
     }
   }
 
+// FOOTER
+  #footer-container{
+    padding: 50px 100px;
+
+      #links-container {
+        
+      span{
+          font-size: 26px;
+      }
+      
+      a{
+          font-size: 18px;
+      }  
+    }
+
+    #icons-container {
+      width: 100%;
+    }
+  }
 
 }
 
