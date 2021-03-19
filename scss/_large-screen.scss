@@ -1,6 +1,9 @@
 @media only screen and (min-width: 1367px) {
+  .navbar-toggle {
+    display: none;
+  }
   .navbar-link {
-    color: #30333C;
+    color: $text-black-color;
   }
 
 

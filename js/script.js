@@ -1,9 +1,10 @@
-// NAVBAR FOR MOBILE
+// NAVBAR 
 
-const navbar = document.getElementById("navbar");
-const navbarToggle = navbar.querySelector(".navbar-toggle");
-const navbarMenu = navbar.querySelector(".navbar-menu");
-const navbarLinksContainer = navbar.querySelector(".navbar-links");
+const navbar = document.getElementById("navbar-container");
+const navbarToggle = document.querySelector(".navbar-toggle");
+const navbarMenu = document.querySelector(".navbar-menu");
+const navbarLinksContainer = document.querySelector(".navbar-links");
+const navbarLinks = document.querySelectorAll(".navbar-link")
 
 navbarToggle.addEventListener("click", () => {
     if (navbar.classList.contains("opened")) {
@@ -11,6 +12,10 @@ navbarToggle.addEventListener("click", () => {
     } else {
         openMobileNavbar();
     }
+});
+
+navbarLinks.forEach(link => {
+    link.addEventListener("click", closeMobileNavbar);
 });
 
 navbarLinksContainer.addEventListener("click", (clickEvent) => {
@@ -21,13 +26,12 @@ navbarMenu.addEventListener("click", closeMobileNavbar);
 
 function openMobileNavbar() {
     navbar.classList.add("opened");
-    navbarToggle.setAttribute("aria-label", "Close navigation menu.");
 }
 
 function closeMobileNavbar() {
     navbar.classList.remove("opened");
-    navbarToggle.setAttribute("aria-label", "Open navigation menu.");
 }
+
 
 // GALLERY
 

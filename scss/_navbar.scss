@@ -1,29 +1,26 @@
-.navbar {
+#navbar-container {
   position: fixed;
   width: 100%;
   height: $navbar-height;
   left: 0;
   right: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  z-index: 2;
+  color: $text-black-color;
   background-color: #fff;
   font-weight: 500;
-  padding: 0.5rem calc((100vw - 1367px) /2);
+  z-index: 2;
 
-  &-container {
+  #navbar-inner-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 48px;
+    margin: 0 auto;
     height: 100%;
 
     .home-link {
       text-decoration: none;
-      color: #30333C;
-    }
-
-    .navbar-toggle {
-      display: none;
+      color: $text-black-color;
     }
 
     .navbar-menu {
@@ -45,7 +42,7 @@
         }
 
         .navbar-item:hover {
-          transform: scale(.97);
+          transform: scale(.98);
         }
       }
     }

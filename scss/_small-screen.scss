@@ -1,9 +1,6 @@
 @media only screen and (max-width: 640px) {
 
-#navbar {
-
-  .container {
-    min-width: 280px;
+#navbar-inner-container {
 
     .navbar-toggle {
       cursor: pointer;
@@ -11,82 +8,33 @@
       background-color: transparent;
       width: 40px;
       height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      outline: none;
 
-      .icon-bar {
-        display: block;
-        width: 25px;
-        height: 4px;
-        margin: 2px;
-        -webkit-transition: background-color 0.2s ease-in-out,
-        opacity 0.2s ease-in-out,
-        -webkit-transform 0.2s ease-in-out;
-        transition: background-color 0.2s ease-in-out,
-        opacity 0.2s ease-in-out,
-        -webkit-transform 0.2s ease-in-out;
-        -o-transition: background-color 0.2s ease-in-out,
-        transform 0.2s ease-in-out,
-        opacity 0.2s ease-in-out;
-        transition: background-color 0.2s ease-in-out,
-        transform 0.2s ease-in-out,
-        opacity 0.2s ease-in-out;
-        transition: background-color 0.2s ease-in-out,
-        transform 0.2s ease-in-out,
-        opacity 0.2s ease-in-out,
-        -webkit-transform 0.2s ease-in-out;
-        background-color: #30333C;
+      i {
+        font-size: 24px;
+        transition: .3s;
       }
 
-    }
-
-    .navbar-toggle:focus .icon-bar,
-    .navbar-toggle:hover .icon-bar {
-      background-color: $navbar-text-focus-color;
+      i:hover {
+        transform: scale(.96);
+      }
     }
 
     .navbar-menu {
       position: fixed;
       top: $navbar-height;
       bottom: 0;
-      -webkit-transition: opacity 0.2s ease-in-out,
-      visibility 0.2s ease-in-out;
-      -o-transition: opacity 0.2s ease-in-out,
-      visibility 0.2s ease-in-out;
-      transition: opacity 0.2s ease-in-out,
-      visibility 0.2s ease-in-out;
+      transition: .2s;
       opacity: 0;
       visibility: hidden;
       left: 0;
       right: 0;
     }
-  }
 }
 
   //Toggling the mobile navbar
 
-  #navbar.opened .navbar-toggle .icon-bar:first-child,
-  #navbar.opened .navbar-toggle .icon-bar:last-child {
-    position: absolute;
-    margin: 0;
-    width: 30px;
-  }
-
-  #navbar.opened .navbar-toggle .icon-bar:first-child {
-    -webkit-transform: rotate(45deg);    -ms-transform: rotate(45deg);    transform: rotate(45deg);
-  }
-
-  #navbar.opened .navbar-toggle .icon-bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  #navbar.opened .navbar-toggle .icon-bar:last-child {
-    -webkit-transform: rotate(-45deg);    -ms-transform: rotate(-45deg);    transform: rotate(-45deg);
-  }
-
-  #navbar.opened .navbar-menu {
+  #navbar-container.opened .navbar-menu {
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     visibility: visible;
@@ -98,8 +46,6 @@
     max-height: 0;
     overflow: hidden;
     position: absolute;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,7 +72,7 @@
     }
   }
 
-  #navbar.opened .navbar-links {
+  #navbar-container .navbar-links {
     padding: 1em;
     max-height: none;
   }
