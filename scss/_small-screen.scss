@@ -144,7 +144,7 @@
     margin-bottom: 40px;
 
     .title {
-      padding: 1rem;
+      padding: 16px;
 
       .main-title {
         font-size: 24px;
@@ -157,43 +157,41 @@
       }
 
       .button-left{
-        font-size: 0.8rem;
-        margin-left: 0.4rem;
+        font-size: 13px;
+        margin-left: 7px;
         width: 35px;
         height: 35px;
         bottom: 50%;
       }
       .button-right{
-        font-size: 0.8rem;
-        margin-right: 0.4rem;
+        font-size: 13px;
+        margin-right: 7px;
         width: 35px;
         height: 35px;
         bottom: 50%;
       }
     }
     .sliding-container{
+      width: 100%;
       .card{
-        min-width: 250px;
-        margin-left: 0.5rem;
-        margin-right: 1.5rem;
+        width: 250px;
 
         .card-image {
-          max-height: 250px;
-          min-height: 250px;
+          height: 250px;
+          width: 250px;
         }
 
         .text-container{
-          padding: 0 1rem;
+          padding: 20px 4px 20px 28px;
 
-          h2 {
-            line-height: 1.1rem;
-            font-size: 0.9rem;
+          span {
+            font-size: 18px;
           }
 
           p {
-            text-align: justify;
-            font-size: 0.8rem;
-            line-height: 1rem;
+            margin: 10px 0;
+            line-height: 16px;
+            font-size: 12px;
           }
         }
       }

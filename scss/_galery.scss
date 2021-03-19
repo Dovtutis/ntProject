@@ -64,7 +64,6 @@
       .card{
         z-index: 1;
         display: inline-block;
-        width: 28%;
         min-width: 200px;
         height: 100%;
         margin: 0 3rem;
@@ -80,11 +79,22 @@
         }
 
         .text-container {
+          width: 100%;
           background-color: #fff;
+          margin-bottom: 20px;
+
+          span {
+            font-weight: 500;
+          }
+
+          p {
+            margin: 10px 0;
+          }
 
           .fa-arrow-right{
             float: right;
-            font-size: 1.5rem;
+            font-size: 24px;
+            margin-right: 10px;
             cursor: pointer;
             transition: .3s;
           }

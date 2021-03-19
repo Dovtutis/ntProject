@@ -11,7 +11,7 @@
     height: 550px;
     margin-bottom: 80px;
     .title {
-      padding: 1.5rem 0;
+      padding: 24px 0;
       margin-left: 36px;
       .main-title {
         font-size: 30px;
@@ -34,25 +34,24 @@
 
       .sliding-container{
         .card{
-          margin: 0 2rem;
           width: 300px;
-
+  
           .card-image {
             height: 300px;
+            width: 300px;
           }
-
+  
           .text-container{
-            padding: 0 1rem;
-
-            h2 {
-              line-height: 1.4rem;
-              font-size: 1.2rem;
+            padding: 24px 6px 24px 34px;
+  
+            span {
+              font-size: 22px;
             }
-
+  
             p {
-              text-align: justify;
-              font-size: 1rem;
-              line-height: 1.2rem;
+              margin: 12px 0;
+              line-height: 20px;
+              font-size: 14px;
             }
           }
         }

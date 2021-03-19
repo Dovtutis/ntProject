@@ -67,15 +67,13 @@ function createGalleryCards (imagesArray){
         img.classList.add("card-image");
         let textContainer = document.createElement("div");
         textContainer.classList.add("text-container");
-        let headline = document.createElement("h2");
+        let headline = document.createElement("span");
         headline.innerText = "Lorem ipsum dolor sit amet";
-        headline.classList.add("py-1");
         let paragraph = document.createElement("p");
         paragraph.innerText = "Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut"
         let arrowIcon = document.createElement("i");
         arrowIcon.classList.add("fas");
         arrowIcon.classList.add("fa-arrow-right");
-        arrowIcon.classList.add("pb-2");
         textContainer.appendChild(headline);
         textContainer.appendChild(paragraph);
         textContainer.appendChild(arrowIcon);

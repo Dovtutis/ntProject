@@ -6,7 +6,7 @@
 
     .title {
       min-width: 250px;
-      margin-left: 1rem;
+      margin-left: 16px;
 
       .main-title {
         font-size: 14px;
@@ -15,28 +15,26 @@
     }
 
     .sliding-container{
+      width: 100%;
       .card{
-        min-width: 200px;
-        margin-left: 0.5rem;
-        margin-right: 1.5rem;
+        width: 200px;
 
         .card-image {
-          max-height: 200px;
-          min-height: 200px;
+          height: 200px;
+          width: 200px;
         }
 
         .text-container{
-          padding: 0 0.5rem;
+          padding: 14px 2px 16px 20px;
 
-          h2 {
-            line-height: 1rem;
-            font-size: 0.8rem;
+          span {
+            font-size: 14px;
           }
 
           p {
-            text-align: justify;
-            font-size: 0.7rem;
-            line-height: 0.9rem;
+            margin: 8px 0;
+            line-height: 14px;
+            font-size: 10px;
           }
         }
       }
