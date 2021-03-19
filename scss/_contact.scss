@@ -37,18 +37,18 @@
                     .employee-name {
                         font-weight: bold;
                         color: $darker-blue-color;
-                        font-family: 'Quicksand';
+                        font-family: $font-1;
                     }
 
                     .employee-email {
                         color: $text-light-black-color;
-                        font-family: 'Montserrat';
+                        font-family: $font-2;
                         font-weight: 600;
                     }
 
                     .employee-phone {
                         color: $text-light-black-color;
-                        font-family: 'Montserrat';
+                        font-family: $font-2;
                         font-weight: 600;
                     }
                 }
@@ -78,18 +78,18 @@
         #form-title {
             color: $darker-blue-color;
             font-weight: bold;
-            font-family: 'Quicksand';
+            font-family: $font-1;
         }
 
         #contact-form {
-            font-family: 'Montserrat';   
+            font-family: $font-2;  
 
             .form-input-element {
                 border: none;
                 width: 90%;
                 outline: none;
                 border-bottom: 1px solid rgba($color: #6F88B1, $alpha: 0.4);
-                font-family: 'Montserrat'; 
+                font-family: $font-2;
                 font-weight: 500;
                 color: $text-light-black-color;
             } 
@@ -136,7 +136,7 @@
                 border: none;
                 text-align: center;
                 font-weight: bold;
-                font-family: 'Quicksand';
+                font-family: $font-1;
                 cursor: pointer;
                 transition: .3s;
                 outline: none;

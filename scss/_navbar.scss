@@ -33,7 +33,7 @@
         align-items: center;
         list-style-type: none;
         transition: color .3s ease-in-out;
-        font-family: 'Montserrat';
+        font-family: $font-2;
 
         .navbar-link {
           text-decoration: none;
@@ -53,7 +53,7 @@
     .nav-logo {
       font-size: 22px;
       font-weight: bold;
-      font-family: 'Quicksand';
+      font-family: $font-1;
     }
 
   }

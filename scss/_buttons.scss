@@ -34,7 +34,7 @@
 .table-button{
   color: #ffffff;
   background-color: $table-buttons-color;
-  font-family: 'Quicksand';
+  font-family: $font-1;
   font-weight: bold;
   border: none;
   outline: none;
@@ -61,7 +61,7 @@
   color: #fff;
   background-color: $text-black-color;
   cursor: pointer;
-  font-family: 'Quicksand';
+  font-family: $font-1;
   transition: .3s;
 }
 

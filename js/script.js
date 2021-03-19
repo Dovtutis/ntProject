@@ -228,7 +228,6 @@ function filterBySize(event) {
 }
 
 function filterByRooms(event) {
-    console.log(event);
     const roomQuantity = event.target.innerText;
     let filteredArray = [];
     filteredArray = flatsArray.filter(flat => flat.room == roomQuantity);
